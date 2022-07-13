@@ -12,3 +12,7 @@
 [![GitHub license](https://img.shields.io/github/license/EternalCodeTeam/docs?style=for-the-badge)](https://github.com/EternalCodeTeam/docs/blob/master/LICENSE)    
     
 </div>
+
+![screencapture-localhost-8080-2022-07-13-13_33_39](https://user-images.githubusercontent.com/65517973/178724390-dd63c5cd-bab7-4930-82ee-b51a1617190f.png)
+![screencapture-localhost-8080-docs-2022-07-13-13_34_23](https://user-images.githubusercontent.com/65517973/178724458-0442d24e-3d69-4314-86d5-08328fb19a91.png)
+
