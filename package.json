@@ -1,0 +1,26 @@
+{
+  "name": "docs",
+  "version": "0.0.1",
+  "description": "All documentations of EternalCodeTeam Projects &amp; Tutorials",
+  "main": "index.js",
+  "authors": {
+    "name": "Martin Sulikowski",
+    "email": "vluckyyy.biznes@gmail.com"
+  },
+  "repository": "https://github.com/EternalCodeTeam/docs/docs",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-medium-zoom": "^1.9.7",
+    "vuepress": "^0.14.11",
+    "vuepress-plugin-git-log": "^1.0.1",
+    "vuepress-plugin-smooth-scroll": "^0.0.10"
+  },
+  "dependencies": {
+    "@vuepress/plugin-back-to-top": "^1.9.7",
+    "moment": "^2.29.4"
+  }
+}
