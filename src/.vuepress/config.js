@@ -12,7 +12,7 @@ module.exports = {
   themeConfig: {
     repo: 'https://github.com/EternalCodeTeam/docs',
     editLinks: true,
-    docsDir: '',
+    docsDir: '/src',
     editLinkText: 'Edit this page on GitHub',
     lastUpdated: true,
     nav: [
