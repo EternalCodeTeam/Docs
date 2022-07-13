@@ -15,7 +15,7 @@
   "license": "GPL-3.0",
   "devDependencies": {
     "@vuepress/plugin-medium-zoom": "^1.9.7",
-    "vuepress": "^0.14.11",
+    "vuepress": "^1.9.7",
     "vuepress-plugin-git-log": "^1.0.1",
     "vuepress-plugin-smooth-scroll": "^0.0.10"
   },
