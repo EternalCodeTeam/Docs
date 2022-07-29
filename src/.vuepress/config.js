@@ -17,12 +17,12 @@ module.exports = {
     lastUpdated: true,
     nav: [
       {
-        text: 'Documentation',
-        link: '/docs/',
+        text: 'EternalCode.pl',
+        link: 'https://eternalcode.pl',
       },
       {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'Documentation',
+        link: '/docs/'
       }
     ],
     sidebar: {
