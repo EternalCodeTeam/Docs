@@ -34,8 +34,43 @@ module.exports = {
             '',
             'about',
           ]
+        },
+      ],
+      '/docs/eternalcore': [
+        {
+          title: "EternalCore",
+          collapsable: true,
+          children: []
         }
       ],
+      '/docs/eternalcheck': [
+        {
+          title: "EternalCheck",
+          collapsable: true,
+          children: []
+        }
+      ],
+      '/docs/chatformatter': [
+        {
+          title: "ChatFormatter",
+          collapsable: true,
+          children: []
+        }
+      ],
+      '/docs/eteralrtp': [
+        {
+          title: "EternalRTP",
+          collapsable: true,
+          children: []
+        }
+      ],
+      '/docs/linuxtutorials': [
+        {
+          title: "Linux Tutorials",
+          collapsable: true,
+          children: []
+        }
+      ]
     }
   },
 
