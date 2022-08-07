@@ -11,6 +11,8 @@ export default defineConfig({
     themeConfig: {
         nav: nav(),
 
+        logo: 'https://i.imgur.com/L30zyfc.png',
+
         sidebar: {
             '/documentation/': sidebarGuide(),
             '/linuxtutorials/': linuxTutorials(),
