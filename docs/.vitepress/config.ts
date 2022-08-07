@@ -9,13 +9,13 @@ export default defineConfig({
     lastUpdated: true,
 
     themeConfig: {
-        nav: nav(),
+        nav: configureNavBar(),
 
         logo: 'https://i.imgur.com/L30zyfc.png',
 
         sidebar: {
-            '/documentation/': sidebarGuide(),
-            '/linuxtutorials/': linuxTutorials(),
+            '/documentation/': configureDocumentationSidebar(),
+            '/linuxtutorials/': configureLinuxTutorialSidebar(),
         },
 
         editLink: {
@@ -41,13 +41,13 @@ export default defineConfig({
     }
 })
 
-function nav() {
+function configureNavBar() {
     return [
         { text: 'EternalCode.pl', link: 'https://eternalcode.pl/' }
     ]
 }
 
-function sidebarGuide() {
+function configureDocumentationSidebar() {
     return [
         {
             text: 'Introduction',
@@ -59,7 +59,7 @@ function sidebarGuide() {
     ]
 }
 
-function linuxTutorials() {
+function configureLinuxTutorialSidebar() {
     return [
         {
             text: 'Linux Tutorials',
