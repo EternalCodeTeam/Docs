@@ -11,8 +11,11 @@ hero:
   tagline: Programing and Minecraft servers community.
   actions:
     - theme: brand
-      text: Get Started
+      text: General Documentation
       link: /documentation/introduction
+    - theme: brand
+      text: Linux Tutorials
+      link: /linuxtutorials/introduction
     - theme: alt
       text: Visit our Github
       link: https://github.com/EternalCodeTeam/---

@@ -13,7 +13,7 @@ export default defineConfig({
 
         sidebar: {
             '/documentation/': sidebarGuide(),
-            '/linuxtutorials/': sidebarGuide()
+            '/linuxtutorials/': linuxTutorials(),
         },
 
         editLink: {
@@ -47,12 +47,18 @@ function sidebarGuide() {
             items: [
                 { text: 'Getting Started', link: '/documentation/introduction' },
             ]
-        },
+        }
+    ]
+}
+
+function linuxTutorials() {
+    return [
         {
             text: 'Linux Tutorials',
             collapsible: true,
             items: [
-                { text: 'test', link: '/linuxtutorials/test' },
+                { text: 'Getting Started', link: '/linuxtutorials/introduction' },
+                { text: 'Java', link: '/linuxtutorials/tutorials/java' },
             ]
         }
     ]
