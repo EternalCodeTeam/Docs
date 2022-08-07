@@ -18,4 +18,5 @@ hero:
       link: /linuxtutorials/introduction
     - theme: alt
       text: Visit our Github
-      link: https://github.com/EternalCodeTeam/---
+      link: https://github.com/EternalCodeTeam/
+---

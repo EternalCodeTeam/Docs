@@ -1,8 +1,6 @@
 {
   "name": "docs",
-  "version": "0.0.1",
   "description": "All documentations of EternalCodeTeam Projects &amp; Tutorials",
-  "main": "index.js",
   "authors": {
     "name": "Martin Sulikowski",
     "email": "vluckyyy.biznes@gmail.com"
