@@ -9,18 +9,13 @@
   },
   "repository": "https://github.com/EternalCodeTeam/docs",
   "scripts": {
-    "dev": "vuepress dev src",
-    "build": "vuepress build src"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "license": "GPL-3.0",
   "devDependencies": {
-    "@vuepress/plugin-medium-zoom": "^1.9.7",
-    "vuepress": "^1.9.7",
-    "vuepress-plugin-git-log": "^1.0.1",
-    "vuepress-plugin-smooth-scroll": "^0.0.10"
-  },
-  "dependencies": {
-    "@vuepress/plugin-back-to-top": "^1.9.7",
-    "moment": "^2.29.4"
+    "vitepress": "^1.0.0-alpha.4",
+    "vue": "^3.2.37"
   }
 }
