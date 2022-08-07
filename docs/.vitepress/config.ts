@@ -30,6 +30,12 @@ export default defineConfig({
             message: 'Made by Martin Sulikowski with ❤️',
             copyright: 'Copyright © 2022'
         },
+
+        algolia: {
+            appId: 'H1OE3WGSU8',
+            apiKey: 'b001d687f84c24a0c1568281b037a05f',
+            indexName: 'dev_eternalcode'
+        },
     }
 })
 
