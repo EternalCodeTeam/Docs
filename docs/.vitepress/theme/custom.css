@@ -352,8 +352,8 @@
  * -------------------------------------------------------------------------- */
 
 :root {
-    --vp-home-hero-name-color: var(--vp-c-brand);
-    --vp-home-hero-name-background: transparent;
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: -webkit-linear-gradient(7deg, rgba(0,215,255,1) 26%, rgba(66,184,131,1) 91%);
 
 
     --vp-home-hero-image-background-image: none;
