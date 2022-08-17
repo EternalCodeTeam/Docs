@@ -17,7 +17,7 @@
     "vue": "3.2.37"
   },
   "dependencies": {
-    "markdown-it": "^13.0.1",
-    "markdown-it-codetabs": "^1.2.0"
+    "markdown-it": "13.0.1",
+    "markdown-it-codetabs": "1.2.0"
   }
 }
