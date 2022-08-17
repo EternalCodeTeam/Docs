@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import codetabs from "markdown-it-codetabs";
 
 
 export default defineConfig({
@@ -7,6 +8,12 @@ export default defineConfig({
     description: 'All documentations of EternalCodeTeam Projects & Tutorials',
 
     lastUpdated: true,
+
+    markdown: {
+        config: (md) => {
+            md.use(codetabs)
+        }
+    },
 
     themeConfig: {
         nav: configureNavBar(),
@@ -31,12 +38,6 @@ export default defineConfig({
         footer: {
             message: 'Made by Martin Sulikowski with ❤️',
             copyright: 'Copyright © 2022'
-        },
-
-        algolia: {
-            appId: 'H1OE3WGSU8',
-            apiKey: 'b001d687f84c24a0c1568281b037a05f',
-            indexName: 'dev_eternalcode'
         },
     }
 })
