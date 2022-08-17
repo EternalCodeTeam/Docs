@@ -500,12 +500,12 @@ magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.8"
 
-markdown-it-codetabs@^1.2.0:
+markdown-it-codetabs@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/markdown-it-codetabs/-/markdown-it-codetabs-1.2.0.tgz#e1c2626dee5e726d76c2739c425ebfd4443d2f1e"
   integrity sha512-kF0ec56hKmBZ4xMSFm1pIOuRT37iInD8uvTq+uaWpVKnja6mAg6gkGMLaeLeBiRx4fAMJmrWy417WPf8GgNWxg==
 
-markdown-it@^13.0.1:
+markdown-it@13.0.1:
   version "13.0.1"
   resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-13.0.1.tgz#c6ecc431cacf1a5da531423fc6a42807814af430"
   integrity sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q==
