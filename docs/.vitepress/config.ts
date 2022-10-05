@@ -68,7 +68,7 @@ function configureLinuxTutorialSidebar() {
             items: [
                 { text: 'Getting Started', link: '/linuxtutorials/introduction' },
                 { text: 'Java', link: '/linuxtutorials/tutorials/java' },
-                { text: 'LAMP (Ubuntu 18.04-22.04)', link: '/linuxtutorial/tutorials/lamp' },
+                { text: 'LAMP (Ubuntu 18.04-22.04)', link: '/linuxtutorials/tutorials/lamp' },
             ]
         }
     ]
