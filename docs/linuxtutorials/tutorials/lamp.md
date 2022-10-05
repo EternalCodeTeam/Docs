@@ -11,17 +11,17 @@ Okey, We have added PHP repository, let's go install web server
 
 ## 2. Install web server (apache2)
 ```bash
-    sudo apt install apache2 -y
-    sudo systemctl enable apache2.service
-    sudo systemctl start apache2.service
+sudo apt install apache2 -y
+sudo systemctl enable apache2.service
+sudo systemctl start apache2.service
 ```
 
 Okey, good job 🎉 Let's go install PHP interpreter and MariaDB
 
 ## 3. Install PHP 8.1 packages
 ```bash
-    sudo apt install php8.1 php8.1-{bcmath,bz2,intl,gd,mbstring,mysql,zip,fpm} -y
-    sudo systemctl restart apache2.service
+sudo apt install php8.1 php8.1-{bcmath,bz2,intl,gd,mbstring,mysql,zip,fpm} -y
+sudo systemctl restart apache2.service
 ```
 
 ## 4. Install MariaDB server
