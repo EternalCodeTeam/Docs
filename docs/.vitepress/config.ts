@@ -21,7 +21,7 @@ export default defineConfig({
         logo: 'https://i.imgur.com/L30zyfc.png',
 
         sidebar: {
-            '/documentation/': configureDocumentationSidebar(),
+            '/eternalcore/': configureEternalCoreSidebar(),
             '/linuxtutorials/': configureLinuxTutorialSidebar(),
         },
 
@@ -44,17 +44,20 @@ export default defineConfig({
 
 function configureNavBar() {
     return [
-        { text: 'EternalCode.pl', link: 'https://eternalcode.pl/' }
+        { text: 'EternalCode.pl', link: 'https://eternalcode.pl/' },
+        { text: 'EternalCore', link: '/eternalcore/introduction' },
     ]
 }
 
-function configureDocumentationSidebar() {
+function configureEternalCoreSidebar() {
     return [
         {
             text: 'Introduction',
             collapsible: true,
             items: [
-                { text: 'Getting Started', link: '/documentation/introduction' },
+                { text: 'Getting Started', link: '/eternalcore/introduction' },
+                { text: 'Commands', link: '/eternalcore/commands' },
+                { text: 'Features', link: '/eternalcore/features' },
             ]
         }
     ]
