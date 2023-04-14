@@ -56,7 +56,6 @@ function configureEternalCoreSidebar() {
             collapsible: true,
             items: [
                 { text: 'Getting Started', link: '/eternalcore/introduction' },
-                { text: 'Commands', link: '/eternalcore/commands' },
                 { text: 'Features', link: '/eternalcore/features' },
             ]
         }

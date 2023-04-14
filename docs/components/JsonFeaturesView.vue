@@ -4,17 +4,15 @@
       <thead>
       <tr>
         <th>Name</th>
-        <th>Arguments</th>
         <th>Permissions</th>
         <th>Description</th>
       </tr>
       </thead>
       <tbody>
-      <tr v-for="command in commands" :key="command.name">
-        <td>{{ command.name }}</td>
-        <td>{{ command.arguments.join(", ") }}</td>
-        <td>{{ command.permissions.join(", ") }}</td>
-        <td>{{ command.descriptions.join(", ") }}</td>
+      <tr v-for="features in features" :key="features.name">
+        <td>{{ features.name }}</td>
+        <td>{{ features.permissions.join(", ") }}</td>
+        <td>{{ features.descriptions.join(", ") }}</td>
       </tr>
       </tbody>
     </table>
@@ -25,24 +23,23 @@
 import {defineComponent} from 'vue'
 import axios from 'axios'
 
-interface Command {
+interface Feature {
   name: string
   permissions: string[]
   descriptions: string[]
-  arguments: string[]
 }
 
 export default defineComponent({
   data() {
     return {
-      commands: [] as Command[],
+      features: [] as Feature[],
     }
   },
   async mounted() {
-    const url = 'https://raw.githubusercontent.com/EternalCodeTeam/EternalCore/setup-auto-docs-system/raw_commands_docs.json'
+    const url = 'https://raw.githubusercontent.com/EternalCodeTeam/EternalCore/setup-auto-docs-system/raw_features_docs.json'
     try {
       const response = await axios.get(url)
-      this.commands = response.data
+      this.features = response.data
     } catch (error) {
       console.error(error)
     }
