@@ -4,15 +4,15 @@
       <thead>
       <tr>
         <th>Name</th>
-        <th>Permissions</th>
         <th>Description</th>
+        <th>Permissions</th>
       </tr>
       </thead>
       <tbody>
       <tr v-for="features in features" :key="features.name">
         <td>{{ features.name }}</td>
-        <td>{{ features.permissions.join(", ") }}</td>
         <td>{{ features.descriptions.join(", ") }}</td>
+        <td>{{ features.permissions.join(", ") }}</td>
       </tr>
       </tbody>
     </table>

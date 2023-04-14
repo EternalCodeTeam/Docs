@@ -5,16 +5,16 @@
       <tr>
         <th>Name</th>
         <th>Arguments</th>
-        <th>Permissions</th>
         <th>Description</th>
+        <th>Permissions</th>
       </tr>
       </thead>
       <tbody>
       <tr v-for="command in commands" :key="command.name">
         <td>{{ command.name }}</td>
         <td>{{ command.arguments.join(", ") }}</td>
-        <td>{{ command.permissions.join(", ") }}</td>
         <td>{{ command.descriptions.join(", ") }}</td>
+        <td>{{ command.permissions.join(", ") }}</td>
       </tr>
       </tbody>
     </table>
