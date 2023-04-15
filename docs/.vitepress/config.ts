@@ -21,7 +21,8 @@ export default defineConfig({
             allow: [],
             ignore: [],
             cache: true,
-            tokenize: 'forward',
+            tokenize: 'full',
+            preset: 'score',
         }) ]
     },
 

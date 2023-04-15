@@ -16,7 +16,8 @@
         <td>
           <div>
             <span v-for="(permission, index) in feature.permissions" :key="index" @click="copyToClipboard(permission)">
-              <button>{{ permission }}</button>
+              <button @click="copyToClipboard(permission)">{{ permission }}</button>
+              <span v-if="index < feature.permissions.length - 1">, </span>
             </span>
           </div>
         </td>
@@ -54,6 +55,7 @@
 import { defineComponent } from 'vue';
 import axios from 'axios';
 import pkg from 'vue-toastification';
+
 const { useToast } = pkg;
 
 interface Feature {
@@ -81,7 +83,7 @@ export default defineComponent({
     const commandsUrl = 'https://raw.githubusercontent.com/EternalCodeTeam/EternalCore/setup-auto-docs-system/raw_commands_docs.json';
 
     try {
-      const [featuresResponse, commandsResponse] = await Promise.all([
+      const [ featuresResponse, commandsResponse ] = await Promise.all([
         axios.get(featuresUrl),
         axios.get(commandsUrl)
       ]);
@@ -93,24 +95,9 @@ export default defineComponent({
   },
   methods: {
     async copyToClipboard(text: string) {
-      const toast = useToast();
-
       try {
         await navigator.clipboard.writeText(text);
         console.log('Text copied to clipboard');
-
-        toast.success("Successfully copied permission!", {
-          timeout: 5000,
-          closeOnClick: true,
-          pauseOnFocusLoss: false,
-          pauseOnHover: false,
-          draggable: false,
-          draggablePercent: 0.6,
-          showCloseButtonOnHover: false,
-          hideProgressBar: true,
-          closeButton: "button",
-          rtl: false
-        });
       } catch (error) {
         console.error('Failed to copy text: ', error);
       }
