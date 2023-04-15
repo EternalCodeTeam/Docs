@@ -24,7 +24,7 @@
       </tr>
       </tbody>
     </table>
-    <h2>Commands</h2>
+    <h2>Commands-based Features</h2>
     <table>
       <thead>
       <tr>
