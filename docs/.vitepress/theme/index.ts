@@ -19,9 +19,15 @@ export default {
     },
     enhanceApp({ app, router, siteData }) {
         app.use(Toast, {
-            transition: "Vue-Toastification__fade",
-            maxToasts: 10,
-            newestOnTop: true
+                maxToasts: 1,
+                filterBeforeCreate: (toast, toasts) => {
+                    if (toasts.filter(
+                        t => t.type === toast.type
+                    ).length !== 0) {
+                        return false;
+                    }
+                    return toast;
+                }
             },
         );
     }

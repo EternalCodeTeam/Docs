@@ -54,9 +54,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import axios from 'axios';
-import pkg from 'vue-toastification';
-
-const { useToast } = pkg;
+import { useToast } from 'vue-toastification/dist/index.mjs'
+const toast = useToast();
 
 interface Feature {
   name: string
@@ -95,9 +94,23 @@ export default defineComponent({
   },
   methods: {
     async copyToClipboard(text: string) {
+
       try {
         await navigator.clipboard.writeText(text);
-        console.log('Text copied to clipboard');
+        toast.success("Successfully copied permission!", {
+          position: "bottom-right",
+          timeout: 1029,
+          closeOnClick: true,
+          pauseOnFocusLoss: true,
+          pauseOnHover: false,
+          draggable: true,
+          draggablePercent: 0.6,
+          showCloseButtonOnHover: false,
+          hideProgressBar: false,
+          closeButton: "button",
+          icon: true,
+          rtl: false
+        });
       } catch (error) {
         console.error('Failed to copy text: ', error);
       }
