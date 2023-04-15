@@ -53,7 +53,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import axios from 'axios';
-import { POSITION, useToast } from "vue-toastification";
+import pkg from 'vue-toastification';
+const { useToast, POSITION } = pkg;
 
 interface Feature {
   name: string
