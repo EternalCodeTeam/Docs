@@ -1,23 +1,27 @@
 <script setup>
-  import JsonFeaturesAndCommandsView from '../components/JsonFeaturesAndCommandsView.vue';
+  import FeaturesTable from '../components/FeaturesTable.vue';
+  import CommandsTable from '../components/CommandsTable.vue';
 </script>
 
-# All EternalCore Commands and Features
+# 🔥🚀😎 All EternalCore Commands and Features 
 
-<JsonFeaturesAndCommandsView />
+## 🌟 All EternalCore Features 
+<FeaturesTable />
 
-## The magic docs system for developers
+## 🤖👨‍💻💬 All EternalCore Commands 
+<CommandsTable />
+
+## 🧙‍♂️📝 The magic docs system for developers 
 ::: tip
-If you are developer, you can use our docs system in your [PR's!](https://github.com/EternalCodeTeam/EternalCore/compare)
+If you are developer, you can use our docs system in your [PR's! 😍🙌](https://github.com/EternalCodeTeam/EternalCore/compare)
 :::
 
 Docs system is a tool that allows developers to place information about their code directly into the source file using
 annotations. These annotations are then processed by the system and converted into JSON files that can be used to create
-a graphical documentation of the project.
+a graphical documentation of the project. 🤓💻📚
 
 ::: code-group
 ```java{12-19,1-8} [Standard feature]
-
 @FeatureDocs(
     name = "ExampleFeatureDocsService", // Name of feature
     permission = "example.feature.docs.service", // If feature has permission, please add it here
@@ -43,14 +47,16 @@ class ExampleFeatureDocsService {
 }
 ```
 
-```java{7,12,18} [LiteCommands Standard]
-@Route(name = "tpa", aliases = {"teleporta"})
+```java{2,8-9,14,20} [LiteCommands Standard]
+@Route(name = "tpa", aliases = { "tprequest" }) 
+// ^^^ see https://docs.rollczi.dev/documentation/litecommands/features/route-and-execute for more information
 @Permission("eternalcore.tpa")
 public class TpaCommand {
 
     @Execute
     @Permission("eternalcore.tpa.send")
-    @DocsDescription(description = "Sends tpa request", arguments = "<player>") // Description of command and if command has arguments, please add it here
+    @DocsDescription(description = "Sends tpa request", arguments = "<player>") 
+    // ^^^ Description of command and if command has arguments, please add it here
     public void send(@Arg String player) {}
 
     @Execute(route = "accept")
@@ -67,21 +73,23 @@ public class TpaCommand {
 }
 ```
 
-```java{8,14} [LiteCommands with @RootRoute usage]
-@RootRoute
+```java{2,9,15-16} [LiteCommands with @RootRoute usage]
+@RootRoute 
+// ^^^ see https://docs.rollczi.dev/documentation/litecommands/features/root-route for more information
 @Permission("permissions.root")
 @Permission("permissions.root2")
 public class RootTestCommand {
 
     @Execute(route = "test-root")
     @Permission("permissions.root.execute")
-    @DocsDescription(description = "This is descriptions")
+    @DocsDescription(description = "This is descriptions") // Description of command without arguments
     public void execute() {}
 
 
     @Execute(route = "test-root other")
     @Permission("permissions.root.execute.other")
-    @DocsDescription(description = "This is descriptions", arguments = "<player>")
+    @DocsDescription(description = "This is descriptions", arguments = "<player>") 
+    // ^^^ Description of command and if command has arguments, please add it here
     public void executeOther(@Arg Player player) {}
 
 }

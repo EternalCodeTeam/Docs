@@ -1,3 +1,15 @@
 .content-container {
     max-width: 100% !important;
 }
+
+.content {
+    max-width: 100% !important;
+}
+
+.VPContent.has-sidebar {
+    padding-right: unset !important;
+}
+
+.VPNavBar.has-sidebar .content {
+    padding-right: 30px !important;
+}
