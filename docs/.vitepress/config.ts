@@ -1,6 +1,4 @@
 import { defineConfig } from "vitepress";
-import codetabs from "markdown-it-codetabs";
-
 
 export default defineConfig({
     lang: 'en-US',
@@ -8,12 +6,7 @@ export default defineConfig({
     description: 'All documentations of EternalCodeTeam Projects & Tutorials',
 
     lastUpdated: true,
-
-    markdown: {
-        config: (md) => {
-            md.use(codetabs)
-        }
-    },
+    cleanUrls: true,
 
     themeConfig: {
         nav: configureNavBar(),
@@ -37,14 +30,13 @@ export default defineConfig({
 
         footer: {
             message: 'Made by Martin Sulikowski with ❤️',
-            copyright: 'Copyright © 2022'
+            copyright: 'Copyright © 2021-present EternalCodeTeam'
         },
     }
 })
 
 function configureNavBar() {
     return [
-        { text: 'EternalCode.pl', link: 'https://eternalcode.pl/' },
         { text: 'EternalCore', link: '/eternalcore/introduction' },
     ]
 }
@@ -57,6 +49,7 @@ function configureEternalCoreSidebar() {
             items: [
                 { text: 'Getting Started', link: '/eternalcore/introduction' },
                 { text: 'Features', link: '/eternalcore/features' },
+                { text: 'Installation', link: '/eternalcore/installation' },
             ]
         }
     ]

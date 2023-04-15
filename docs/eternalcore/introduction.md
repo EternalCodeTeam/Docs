@@ -1,3 +1,4 @@
-# Introduction
-Hi there 👋
-The EternalCodeTeam is an amazing organization of Open Source projects! Visit our website! [eternalcode.pl](https://eternalcode.pl) 
+# EternalCore wiki's
+* [Installation and upgrading](installation.md)
+* [Features, Commands and Permissions](features.md)
+* [Dev](dev.md)
