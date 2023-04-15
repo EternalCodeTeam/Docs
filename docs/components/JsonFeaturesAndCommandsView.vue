@@ -43,6 +43,7 @@
           <div>
               <span v-for="(permission, index) in command.permissions" :key="index">
                 <button @click="copyToClipboard(permission)">{{ permission }}</button>
+                <span v-if="index < command.permissions.length - 1">, </span>
               </span>
           </div>
         </td>
@@ -55,6 +56,7 @@
 import { defineComponent } from 'vue';
 import axios from 'axios';
 import { useToast } from 'vue-toastification/dist/index.mjs'
+
 const toast = useToast();
 
 interface Feature {

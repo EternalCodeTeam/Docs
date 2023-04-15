@@ -2,6 +2,10 @@ import { SearchPlugin } from "vitepress-plugin-search";
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
+    head: [
+        ['link', { rel: 'icon', href: '/logo.png' }]
+    ],
+
     lang: 'en-US',
     title: 'EternalCode.pl',
     description: 'All documentations of EternalCodeTeam Projects & Tutorials',
@@ -31,7 +35,7 @@ export default defineConfig({
             { text: 'EternalCore', link: '/eternalcore/introduction' },
         ],
 
-        logo: 'https://i.imgur.com/L30zyfc.png',
+        logo: '/logo.png',
 
         sidebar: {
             '/eternalcore/': configureEternalCoreSidebar(),
