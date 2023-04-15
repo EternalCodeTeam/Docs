@@ -81,7 +81,7 @@ export default defineComponent({
     const commandsUrl = 'https://raw.githubusercontent.com/EternalCodeTeam/EternalCore/setup-auto-docs-system/raw_commands_docs.json';
 
     try {
-      const [ featuresResponse, commandsResponse ] = await Promise.all([
+      const [featuresResponse, commandsResponse] = await Promise.all([
         axios.get(featuresUrl),
         axios.get(commandsUrl)
       ]);

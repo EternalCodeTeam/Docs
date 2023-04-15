@@ -1,4 +1,4 @@
-import { defineConfig } from "vitepress";
+import { defineConfig } from 'vitepress'
 
 export default defineConfig({
     lang: 'en-US',
@@ -13,9 +13,15 @@ export default defineConfig({
     },
 
     themeConfig: {
-        nav: configureNavBar(),
+        nav: [
+            { text: 'EternalCore', link: '/eternalcore/introduction' },
+        ],
 
         logo: 'https://i.imgur.com/L30zyfc.png',
+
+        search: {
+            provide: 'local'
+        },
 
         sidebar: {
             '/eternalcore/': configureEternalCoreSidebar(),
@@ -38,12 +44,6 @@ export default defineConfig({
         },
     }
 })
-
-function configureNavBar() {
-    return [
-        { text: 'EternalCore', link: '/eternalcore/introduction' },
-    ]
-}
 
 function configureEternalCoreSidebar() {
     return [

@@ -7,7 +7,7 @@ titleTemplate: Docs
 hero:
   image: https://i.imgur.com/JDEKToH.png
   name: EternalCode.pl
-  text: projects documentation\
+  text: projects documentation
   tagline: EternalCode is a fantastic community of developers!
   actions:
     - theme: alt
