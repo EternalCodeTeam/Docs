@@ -19,9 +19,9 @@ export default {
     },
     enhanceApp({ app, router, siteData }) {
         app.use(Toast, {
-                transition: "Vue-Toastification__fade",
-                maxToasts: 10,
-                newestOnTop: true
+            transition: "Vue-Toastification__fade",
+            maxToasts: 10,
+            newestOnTop: true
             },
         );
     }

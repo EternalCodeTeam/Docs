@@ -54,7 +54,7 @@
 import { defineComponent } from 'vue';
 import axios from 'axios';
 import pkg from 'vue-toastification';
-const { useToast, POSITION } = pkg;
+const { useToast } = pkg;
 
 interface Feature {
   name: string
@@ -81,7 +81,7 @@ export default defineComponent({
     const commandsUrl = 'https://raw.githubusercontent.com/EternalCodeTeam/EternalCore/setup-auto-docs-system/raw_commands_docs.json';
 
     try {
-      const [featuresResponse, commandsResponse] = await Promise.all([
+      const [ featuresResponse, commandsResponse ] = await Promise.all([
         axios.get(featuresUrl),
         axios.get(commandsUrl)
       ]);
@@ -100,7 +100,6 @@ export default defineComponent({
         console.log('Text copied to clipboard');
 
         toast.success("Successfully copied permission!", {
-          position: POSITION.TOP_RIGHT,
           timeout: 5000,
           closeOnClick: true,
           pauseOnFocusLoss: false,
