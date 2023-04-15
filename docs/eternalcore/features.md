@@ -1,12 +1,9 @@
 <script setup>
-  import JsonFeaturesView from '../components/JsonFeaturesView.vue';
-  import JsonCommandView from '../components/JsonCommandView.vue';
+  import JsonFeaturesAndCommandsView from '../components/JsonFeaturesAndCommandsView.vue';
 </script>
 
 # All EternalCore Features
 
-<JsonFeaturesView />
+<JsonFeaturesAndCommandsView />
 
 # All EternalCore Commands-based features
-
-<JsonCommandView />

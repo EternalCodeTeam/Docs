@@ -48,8 +48,8 @@ function configureEternalCoreSidebar() {
             collapsible: true,
             items: [
                 { text: 'Getting Started', link: '/eternalcore/introduction' },
-                { text: 'Features', link: '/eternalcore/features' },
                 { text: 'Installation', link: '/eternalcore/installation' },
+                { text: 'Features', link: '/eternalcore/features' },
             ]
         }
     ]
