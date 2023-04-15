@@ -7,15 +7,16 @@
  * Colors
  * -------------------------------------------------------------------------- */
 
- :root {
-  --vp-c-brand: #646cff;
-  --vp-c-brand-light: #747bff;
-  --vp-c-brand-lighter: #9499ff;
-  --vp-c-brand-lightest: #bcc0ff;
-  --vp-c-brand-dark: #535bf2;
-  --vp-c-brand-darker: #454ce1;
-  --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
+:root {
+    --vp-c-brand: #5bc0de;
+    --vp-c-brand-light: #81d8f4;
+    --vp-c-brand-lighter: #a4d3e8;
+    --vp-c-brand-lightest: #c9e8f4;
+    --vp-c-brand-dark: #4398b1;
+    --vp-c-brand-darker: #2c6578;
+    --vp-c-brand-dimm: rgba(91, 192, 222, 0.08);
 }
+
 
 /**
  * Component: Button
@@ -41,13 +42,13 @@
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(
     120deg,
-    #bd34fe 30%,
+    #4398b1 30%,
     #41d1ff
   );
 
   --vp-home-hero-image-background-image: linear-gradient(
     -45deg,
-    #bd34fe 50%,
+    #4398b1 50%,
     #47caff 50%
   );
   --vp-home-hero-image-filter: blur(40px);

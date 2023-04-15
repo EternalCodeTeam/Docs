@@ -8,6 +8,10 @@ export default defineConfig({
     lastUpdated: true,
     cleanUrls: true,
 
+    markdown: {
+        lineNumbers: true,
+    },
+
     themeConfig: {
         nav: configureNavBar(),
 

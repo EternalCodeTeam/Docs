@@ -6,7 +6,7 @@
       <tr>
         <th>Name</th>
         <th>Description</th>
-        <th>Permissions</th>
+        <th>Permissions (Click to copy)</th>
       </tr>
       </thead>
       <tbody>
@@ -30,7 +30,7 @@
         <th>Name</th>
         <th>Arguments</th>
         <th>Description</th>
-        <th>Permissions</th>
+        <th>Permissions (Click to copy)</th>
       </tr>
       </thead>
       <tbody>

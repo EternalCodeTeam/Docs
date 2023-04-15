@@ -12,6 +12,10 @@ hero:
     - theme: alt
       text: Visit our Github
       link: https://github.com/EternalCodeTeam/
+    - theme: alt
+      text: Visit our Github
+      link: https://github.com/EternalCodeTeam/
+
 
 features:
 - icon: 💡
