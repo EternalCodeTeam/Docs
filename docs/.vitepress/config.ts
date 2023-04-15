@@ -1,4 +1,5 @@
-import { defineConfig } from 'vitepress'
+import { SearchPlugin } from "vitepress-plugin-search";
+import { defineConfig } from "vitepress";
 
 export default defineConfig({
     lang: 'en-US',
@@ -12,16 +13,24 @@ export default defineConfig({
         lineNumbers: true,
     },
 
+    vite: {
+        plugins: [ SearchPlugin({
+            previewLength: 10,
+            buttonLabel: 'Search',
+            placeholder: 'Search',
+            allow: [],
+            ignore: [],
+            cache: true,
+            tokenize: 'forward',
+        }) ]
+    },
+
     themeConfig: {
         nav: [
             { text: 'EternalCore', link: '/eternalcore/introduction' },
         ],
 
         logo: 'https://i.imgur.com/L30zyfc.png',
-
-        search: {
-            provide: 'local'
-        },
 
         sidebar: {
             '/eternalcore/': configureEternalCoreSidebar(),

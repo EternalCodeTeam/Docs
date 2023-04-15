@@ -14,7 +14,9 @@
   },
   "license": "GPL-3.0",
   "devDependencies": {
+    "flexsearch": "^0.7.31",
     "vitepress": "1.0.0-alpha.66",
+    "vitepress-plugin-search": "^1.0.4-alpha.20",
     "vue": "3.2.47"
   },
   "dependencies": {
