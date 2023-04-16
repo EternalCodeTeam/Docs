@@ -68,6 +68,7 @@ function configureEternalCoreSidebar() {
                 { text: '🔧 Installation', link: '/eternalcore/installation' },
                 { text: '✨ Features', link: '/eternalcore/features' },
                 { text: '🔔 Notifications', link: '/eternalcore/notifications' },
+                { text: '🏠 Homes', link: '/eternalcore/homes' },
             ]
         }
     ]

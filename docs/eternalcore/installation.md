@@ -1,3 +1,5 @@
+# Installation and upgrading 🔧
+
 ## 🛠️ Installation
 
 ### Step 1: Download ⬇️ the plugin and place the jar in the `plugins` folder 📂
