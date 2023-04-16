@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h3>Features</h3>
     <table>
       <thead>
       <tr>

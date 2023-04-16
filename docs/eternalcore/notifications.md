@@ -10,15 +10,15 @@ Messages can be sent with a prefix that defines where the message will be displa
 
 | Notification Type | Description                        |
 |-------------------|------------------------------------|
-| `CHAT`            | Sends a message to the chat.       |
-| `ACTIONBAR`       | Sends a message to the action bar. |
-| `TITLE`           | Sends a message to the title.      |
-| `SUBTITLE`        | Sends a message to the subtitle.   |
-| `DISABLED`        | Turns off the message.             |
+| `[CHAT]`          | Sends a message to the chat.       |
+| `[ACTIONBAR]`     | Sends a message to the action bar. |
+| `[TITLE]`         | Sends a message to the title.      |
+| `[SUBTITLE]`      | Sends a message to the subtitle.   |
+| `[DISABLED]`      | Turns off the message.             |
 
 ## Example usage 📝
 
-**Single messages can be sent using the following syntax:**
+Single messages can be sent using the following syntax:
 
 ::: code-group
 
@@ -49,7 +49,7 @@ example: "[DISABLED]"
 
 :::
 
-**Prefixes can be combined to display messages in different places at the same time. For example:**
+Prefixes can be combined to display messages in different places at the same time. For example:
 
 ::: code-group
 
@@ -75,5 +75,5 @@ example: "[DISABLED]"
 
 :::
 
-**If no prefix is entered, the message will be sent to the chat. So, be sure to include your desired prefix when sending
-messages! 🙌**
+If no prefix is entered, the message will be sent to the chat. So, be sure to include your desired prefix when sending
+messages! 🙌

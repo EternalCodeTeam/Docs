@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 
 export default defineConfig({
     head: [
-        ['link', { rel: 'icon', href: '/logo.png' }]
+        [ 'link', { rel: 'icon', href: '/logo.png' } ]
     ],
 
     lang: 'en-US',
@@ -62,13 +62,22 @@ function configureEternalCoreSidebar() {
     return [
         {
             text: 'Introduction',
-            collapsible: true,
             items: [
-                { text: 'Getting Started', link: '/eternalcore/introduction' },
-                { text: 'Installation', link: '/eternalcore/installation' },
-                { text: 'Features', link: '/eternalcore/features' },
-                { text: 'Notifications', link: '/eternalcore/notifications' },
-            ]
+                { text: '🚀 Getting Started', link: '/eternalcore/introduction' },
+                { text: '💻 Installation', link: '/eternalcore/installation' },
+                { text: '🌟 Features', link: '/eternalcore/features#🌟-all-eternalcore-features' },
+                { text: '🤖👨‍💻💬 Commands', link: '/eternalcore/features#🤖👨%E2%80%8D💻💬-all-eternalcore-commands' },
+                { text: '📢 Notifications', link: '/eternalcore/notifications' },
+            ],
+        },
+        {
+            text: 'For developers',
+            items: [
+                {
+                    text: '🧙‍♂️📝 Docs system For developers',
+                    link: '/eternalcore/features#🧙%E2%80%8D♂%EF%B8%8F📝-the-magic-docs-system-for-developers'
+                },
+            ],
         }
     ]
 }
