@@ -11,7 +11,6 @@ export default defineConfig({
     description: 'All documentations of EternalCodeTeam Projects & Tutorials',
 
     lastUpdated: true,
-    cleanUrls: true,
 
     markdown: {
         lineNumbers: true,
