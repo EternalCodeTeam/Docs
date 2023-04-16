@@ -24,7 +24,8 @@ Single messages can be sent using the following syntax:
 
 ```yaml [CHAT]
 # Displays a message in the chat.
-example: "[CHAT] Hello world!"
+example: "[CHAT] Hello world!" 
+example2: "Hello world!" # If no prefix is entered, the message will be sent to the chat.
 ```
 
 ```yaml [ACTIONBAR]
