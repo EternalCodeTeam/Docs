@@ -1,4 +1,4 @@
-# Installation and upgrading 🔧
+# 🔧 Installation and upgrading
 
 ## 🛠️ Installation
 

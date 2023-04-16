@@ -1,10 +1,10 @@
-# Notifications 💬🔔
+# 💬🔔 Notifications
 
 This plugin allows sending messages to different parts of Minecraft, including the chat, action bar, title, and
 subtitle. All messages can be formatted using [🔍 MiniMessages](https://docs.adventure.kyori.net/minimessage/format.html) or standard color codes. You can also
 use an online [🌐 message generator](https://webui.adventure.kyori.net/)
 
-## Notification Types 📌
+## 📌 Notification Types 
 
 Messages can be sent with a prefix that defines where the message will be displayed. Available prefixes include:
 
@@ -16,7 +16,7 @@ Messages can be sent with a prefix that defines where the message will be displa
 | `[SUBTITLE]`      | Sends a message to the subtitle.   |
 | `[DISABLED]`      | Turns off the message.             |
 
-## Example usage 📝
+## 📝 Example usage
 
 Single messages can be sent using the following syntax:
 
@@ -75,5 +75,4 @@ example: "[DISABLED]"
 
 :::
 
-If no prefix is entered, the message will be sent to the chat. So, be sure to include your desired prefix when sending
-messages! 🙌
+If no prefix is entered, the message will be sent to the chat. So, be sure to include your desired prefix when configuring plugin! 🙌

@@ -18,7 +18,7 @@ If you are developer, you can use our docs system in your [PR's! 😍🙌](https
 
 Docs system is a tool that allows developers to place information about their code directly into the source file using
 annotations. These annotations are then processed by the system and converted into JSON files that can be used to create
-a graphical documentation of the project. 🤓💻📚
+a graphical documentation of the project.
 
 ::: code-group
 ```java{12-19,1-8} [Standard feature]
