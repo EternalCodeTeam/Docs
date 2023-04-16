@@ -48,7 +48,7 @@ export default defineComponent({
     };
   },
   async mounted() {
-    const commandsUrl = 'https://raw.githubusercontent.com/EternalCodeTeam/EternalCore/setup-auto-docs-system/raw_commands_docs.json';
+    const commandsUrl = 'https://raw.githubusercontent.com/EternalCodeTeam/EternalCore/HEAD/raw_commands_docs.json';
 
     try {
       const commandsResponse = await axios.get(commandsUrl);

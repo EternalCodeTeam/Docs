@@ -45,7 +45,7 @@ export default defineComponent({
     };
   },
   async mounted() {
-    const featuresUrl = 'https://raw.githubusercontent.com/EternalCodeTeam/EternalCore/setup-auto-docs-system/raw_features_docs.json';
+    const featuresUrl = 'https://raw.githubusercontent.com/EternalCodeTeam/EternalCore/HEAD/raw_features_docs.json';
 
     try {
       const featuresResponse = await axios.get(featuresUrl);
