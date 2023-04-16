@@ -30,7 +30,7 @@ By following the steps above, you will update the EternalCore plugin on your Min
 👍 We wish you good luck with the plugin update!
 
 ## 💥 Warning!
-When managing a Minecraft server, it's important to remember about safety. Therefore, we recommend not to use the `/reload` command or plugins loaded in real-time such as PlugMan as they may cause problems with plugins and lead to unexpected errors.
+When managing a Minecraft server, it's important to remember about safety. Therefore, we recommend not using the `/reload` command or plugins reloading in real-time such as PlugMan, as they may cause problems with plugins and lead to unexpected errors.
 
 Please note that the use of these features is at your own risk, and we are not responsible for any damages caused to the server as a result of their use.
 
