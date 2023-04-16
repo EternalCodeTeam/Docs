@@ -67,6 +67,7 @@ function configureEternalCoreSidebar() {
                 { text: 'Getting Started', link: '/eternalcore/introduction' },
                 { text: 'Installation', link: '/eternalcore/installation' },
                 { text: 'Features', link: '/eternalcore/features' },
+                { text: 'Notifications', link: '/eternalcore/notifications' },
             ]
         }
     ]
