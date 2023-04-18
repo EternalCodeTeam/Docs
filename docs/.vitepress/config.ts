@@ -1,8 +1,11 @@
+import { SearchPlugin } from "vitepress-plugin-search";
 import { defineConfig } from "vitepress";
-import codetabs from "markdown-it-codetabs";
-
 
 export default defineConfig({
+    head: [
+        ['link', { rel: 'icon', href: '/logo.png' }]
+    ],
+
     lang: 'en-US',
     title: 'EternalCode.pl',
     description: 'All documentations of EternalCodeTeam Projects & Tutorials',
@@ -10,18 +13,31 @@ export default defineConfig({
     lastUpdated: true,
 
     markdown: {
-        config: (md) => {
-            md.use(codetabs)
-        }
+        lineNumbers: true,
+    },
+
+    vite: {
+        plugins: [ SearchPlugin({
+            previewLength: 10,
+            buttonLabel: 'Search',
+            placeholder: 'Search',
+            allow: [],
+            ignore: [],
+            cache: true,
+            tokenize: 'full',
+            preset: 'score',
+        }) ]
     },
 
     themeConfig: {
-        nav: configureNavBar(),
+        nav: [
+            { text: 'EternalCore', link: '/eternalcore/introduction' },
+        ],
 
-        logo: 'https://i.imgur.com/L30zyfc.png',
+        logo: '/logo.png',
 
         sidebar: {
-            '/documentation/': configureDocumentationSidebar(),
+            '/eternalcore/': configureEternalCoreSidebar(),
             '/linuxtutorials/': configureLinuxTutorialSidebar(),
         },
 
@@ -37,24 +53,22 @@ export default defineConfig({
 
         footer: {
             message: 'Made by Martin Sulikowski with ❤️',
-            copyright: 'Copyright © 2022'
+            copyright: 'Copyright © 2021-present EternalCodeTeam'
         },
     }
 })
 
-function configureNavBar() {
-    return [
-        { text: 'EternalCode.pl', link: 'https://eternalcode.pl/' }
-    ]
-}
-
-function configureDocumentationSidebar() {
+function configureEternalCoreSidebar() {
     return [
         {
             text: 'Introduction',
             collapsible: true,
             items: [
-                { text: 'Getting Started', link: '/documentation/introduction' },
+                { text: '🚀 Getting Started', link: '/eternalcore/introduction' },
+                { text: '🔧 Installation', link: '/eternalcore/installation' },
+                { text: '✨ Features', link: '/eternalcore/features' },
+                { text: '🔔 Notifications', link: '/eternalcore/notifications' },
+                { text: '🏠 Homes', link: '/eternalcore/homes' },
             ]
         }
     ]

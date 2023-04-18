@@ -1,8 +1,45 @@
-import DefaultTheme from 'vitepress/theme'
+import { h } from 'vue'
+import Theme, { VPDocAsideSponsors } from 'vitepress/theme'
 
-import './custom.css'
-import './codetabs.css'
-import './patch/disable-adsite-patch.css'
+import './style.css'
 import './patch/increase-content-container-patch.css'
+import './patch/custom-block.patch.css'
+import './patch/table-style-patch.css'
 
-export default DefaultTheme
+// vue toastification
+import "vue-toastification/dist/index.css";
+import Toast from "vue-toastification";
+
+// social blocks
+import SocialBlock from './social/SocialBlock.vue'
+
+Theme.enhanceApp = ({ app }) => {
+    app.component('VPDocAside', () => VPDocAsideSponsors)
+}
+
+export default {
+    ...Theme,
+
+    Layout() {
+        return h(Theme.Layout, null, {
+            'aside-bottom': () => h(SocialBlock),
+        })
+    },
+
+    enhanceApp({ app, router, siteData }) {
+        const toastOptions = {
+            maxToasts: 10,
+            // filter duplicates
+            filterBeforeCreate: (toast, toasts) => {
+                if (toasts.filter(
+                    t => t.type === toast.type
+                ).length !== 0) {
+                    return false;
+                }
+                return toast;
+            }
+        };
+
+        app.use(Toast, toastOptions);
+    }
+}

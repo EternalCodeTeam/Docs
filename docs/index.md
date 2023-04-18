@@ -8,17 +8,15 @@ hero:
   image: https://i.imgur.com/JDEKToH.png
   name: EternalCode.pl
   text: projects documentation
-  tagline: Programing and Minecraft servers community.
+  tagline: EternalCode is a fantastic community of developers!
   actions:
-    - theme: brand
-      text: General Documentation
-      link: /documentation/introduction
-    - theme: brand
-      text: Linux Tutorials
-      link: /linuxtutorials/introduction
     - theme: alt
       text: Visit our Github
       link: https://github.com/EternalCodeTeam/
+    - theme: brand
+      text: EternalCore Docs
+      link: /eternalcore/introduction
+
 
 features:
 - icon: 💡
