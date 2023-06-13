@@ -1,0 +1,97 @@
+{
+  "TagsDescPermissions": {
+    "chatformatter.decorations.*": {
+      "permission": "chatformatter.decorations.*",
+      "tags": "<bold>, <italic>, <underlined>, <strikethrough>, <obfuscated>",
+      "description": "Formatting tags: Use <bold>, <italic>, <underlined>, <strikethrough>, and <obfuscated> tags for formatting text."
+    },
+    "chatformatter.decorations.bold": {
+      "permission": "chatformatter.decorations.bold",
+      "tags": "<bold>",
+      "description": "Formatting tag for bold text: Use <bold> tag to make text bold."
+    },
+    "chatformatter.decorations.italic": {
+      "permission": "chatformatter.decorations.italic",
+      "tags": "<italic>",
+      "description": "Formatting tag for italic text: Use <italic> tag to make text italic."
+    },
+    "chatformatter.decorations.underlined": {
+      "permission": "chatformatter.decorations.underlined",
+      "tags": "<underlined>",
+      "description": "Formatting tag for underlined text: Use <underlined> tag to underline text."
+    },
+    "chatformatter.decorations.strikethrough": {
+      "permission": "chatformatter.decorations.strikethrough",
+      "tags": "<strikethrough>",
+      "description": "Formatting tag for strikethrough text: Use <strikethrough> tag to strikethrough text."
+    },
+    "chatformatter.decorations.obfuscated": {
+      "permission": "chatformatter.decorations.obfuscated",
+      "tags": "<obfuscated>",
+      "description": "Formatting tag for obfuscated text: Use <obfuscated> tag to obfuscate text."
+    },
+    "chatformatter.reset": {
+      "permission": "chatformatter.reset",
+      "tags": "<reset>",
+      "description": "Formatting tag to reset formatting: Use <reset> tag to reset formatting."
+    },
+    "chatformatter.gradient": {
+      "permission": "chatformatter.gradient",
+      "tags": "<gradient>",
+      "description": "Formatting tag for gradient text: Use <gradient> tag to apply gradient effect to text."
+    },
+    "chatformatter.hover": {
+      "permission": "chatformatter.hover",
+      "tags": "<hover>",
+      "description": "Formatting tag for hover text: Use <hover> tag to add hover functionality to text."
+    },
+    "chatformatter.click": {
+      "permission": "chatformatter.click",
+      "tags": "<click>",
+      "description": "Formatting tag for clickable text: Use <click> tag to make text clickable."
+    },
+    "chatformatter.insertion": {
+      "permission": "chatformatter.insertion",
+      "tags": "<insertion>",
+      "description": "Formatting tag for inserted text: Use <insertion> tag to insert predefined text."
+    },
+    "chatformatter.font": {
+      "permission": "chatformatter.font",
+      "tags": "<font>",
+      "description": "Formatting tag for font selection: Use <font> tag to select a specific font for text."
+    },
+    "chatformatter.transition": {
+      "permission": "chatformatter.transition",
+      "tags": "<transition>",
+      "description": "Formatting tag for transition effect: Use <transition> tag to apply a transition effect to text."
+    },
+    "chatformatter.translatable": {
+      "permission": "chatformatter.translatable",
+      "tags": "<lang>",
+      "description": "Formatting tag for translatable text: Use <lang> tag to mark text for language translation."
+    },
+    "chatformatter.selector": {
+      "permission": "chatformatter.selector",
+      "tags": "<selector>",
+      "description": "Formatting tag for selector text: Use <selector> tag to select specific text."
+    },
+    "chatformatter.keybind": {
+      "permission": "chatformatter.keybind",
+      "tags": "<key>",
+      "description": "Formatting tag for keybind text: Use <key> tag to represent a keybind."
+    },
+    "chatformatter.newline": {
+      "permission": "chatformatter.newline",
+      "tags": "<newline>",
+      "description": "Formatting tag for a new line: Use <newline> tag to add a new line."
+    },
+    "chatformatter.chat.reload": {
+      "permission": "chatformatter.chat.reload",
+      "description": "Permission to reload the plugin using the /chatformatter reload command."
+    },
+    "chatformatter.receiveupdates": {
+      "permission": "chatformatter.receiveupdates",
+      "description": "Permission to receive update announcements for this plugin."
+    }
+  }
+}

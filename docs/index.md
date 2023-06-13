@@ -16,6 +16,9 @@ hero:
     - theme: brand
       text: EternalCore Docs
       link: /eternalcore/introduction
+    - theme: brand
+      text: ChatFormatter Docs
+      link: /chatformatter/introduction
 
 
 features:

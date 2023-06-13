@@ -1,0 +1,94 @@
+{
+  "ColorsTable": {
+    "chatformatter.color.*": {
+      "permission": "chatformatter.color.*",
+      "tags": "<red>, <blue>, etc.",
+      "description": "Color tags: <red>, <blue>, etc."
+    },
+    "chatformatter.legacycolor": {
+      "permission": "chatformatter.legacycolor",
+      "tags": "&a, &b, ..., &b, &l etc.",
+      "description": "Allows the use of legacy color codes, such as &c, &4, &l, etc."
+    },
+    "chatformatter.color.black": {
+      "permission": "chatformatter.color.black",
+      "tags": "<black>",
+      "description": "Formatting tag for black color: <black>."
+    },
+    "chatformatter.color.dark_blue": {
+      "permission": "chatformatter.color.dark_blue",
+      "tags": "<dark_blue>",
+      "description": "Formatting tag for dark blue color: <dark_blue>."
+    },
+    "chatformatter.color.dark_green": {
+      "permission": "chatformatter.color.dark_green",
+      "tags": "<dark_green>",
+      "description": "Formatting tag for dark green color: <dark_green>."
+    },
+    "chatformatter.color.dark_aqua": {
+      "permission": "chatformatter.color.dark_aqua",
+      "tags": "<dark_aqua>",
+      "description": "Formatting tag for dark aqua color: <dark_aqua>."
+    },
+    "chatformatter.color.dark_red": {
+      "permission": "chatformatter.color.dark_red",
+      "tags": "<dark_red>",
+      "description": "Formatting tag for dark red color: <dark_red>."
+    },
+    "chatformatter.color.dark_purple": {
+      "permission": "chatformatter.color.dark_purple",
+      "tags": "<dark_purple>",
+      "description": "Formatting tag for dark purple color: <dark_purple>."
+    },
+    "chatformatter.color.gold": {
+      "permission": "chatformatter.color.gold",
+      "tags": "<gold>",
+      "description": "Formatting tag for gold color: <gold>."
+    },
+    "chatformatter.color.gray": {
+      "permission": "chatformatter.color.gray",
+      "tags": "<gray>",
+      "description": "Formatting tag for gray color: <gray>."
+    },
+    "chatformatter.color.dark_gray": {
+      "permission": "chatformatter.color.dark_gray",
+      "tags": "<dark_gray>",
+      "description": "Formatting tag for dark gray color: <dark_gray>."
+    },
+    "chatformatter.color.blue": {
+      "permission": "chatformatter.color.blue",
+      "tags": "<blue>",
+      "description": "Formatting tag for blue color: <blue>."
+    },
+    "chatformatter.color.green": {
+      "permission": "chatformatter.color.green",
+      "tags": "<green>",
+      "description": "Formatting tag for green color: <green>."
+    },
+    "chatformatter.color.aqua": {
+      "permission": "chatformatter.color.aqua",
+      "tags": "<aqua>",
+      "description": "Formatting tag for aqua color: <aqua>."
+    },
+    "chatformatter.color.red": {
+      "permission": "chatformatter.color.red",
+      "tags": "<red>",
+      "description": "Formatting tag for red color: <red>."
+    },
+    "chatformatter.color.light_purple": {
+      "permission": "chatformatter.color.light_purple",
+      "tags": "<light_purple>",
+      "description": "Formatting tag for light purple color: <light_purple>."
+    },
+    "chatformatter.color.yellow": {
+      "permission": "chatformatter.color.yellow",
+      "tags": "<yellow>",
+      "description": "Formatting tag for yellow color: <yellow>."
+    },
+    "chatformatter.color.white": {
+      "permission": "chatformatter.color.white",
+      "tags": "<white>",
+      "description": "Formatting tag for white color: <white>."
+    }
+  }
+}
