@@ -32,12 +32,14 @@ export default defineConfig({
     themeConfig: {
         nav: [
             { text: 'EternalCore', link: '/eternalcore/introduction' },
+            { text: 'ChatFormatter', link: '/chatformatter/introduction' },
         ],
 
         logo: '/logo.png',
 
         sidebar: {
             '/eternalcore/': configureEternalCoreSidebar(),
+            '/chatformatter/': configureChatFormatterSidebar(),
             '/linuxtutorials/': configureLinuxTutorialSidebar(),
         },
 
@@ -61,7 +63,7 @@ export default defineConfig({
 function configureEternalCoreSidebar() {
     return [
         {
-            text: 'Introduction',
+            text: 'EternalCore',
             collapsible: true,
             items: [
                 { text: '🚀 Getting Started', link: '/eternalcore/introduction' },
@@ -69,6 +71,21 @@ function configureEternalCoreSidebar() {
                 { text: '✨ Features', link: '/eternalcore/features' },
                 { text: '🔔 Notifications', link: '/eternalcore/notifications' },
                 { text: '🏠 Homes', link: '/eternalcore/homes' },
+            ]
+        }
+    ]
+}
+
+function configureChatFormatterSidebar() {
+    return [
+        {
+            text: 'ChatFormatter',
+            collapsible: true,
+            items: [
+                { text: '🚀 Getting Started', link: '/chatformatter/introduction' },
+                { text: '🔧 Installation', link: '/chatformatter/installation' },
+                { text: '✨ Features', link: '/chatformatter/features' },
+                { text: '✍️ Examples', link: '/chatformatter/examples' },
             ]
         }
     ]
