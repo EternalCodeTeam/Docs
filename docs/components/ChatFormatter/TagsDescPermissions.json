@@ -84,14 +84,6 @@
       "permission": "chatformatter.newline",
       "tags": "<newline>",
       "description": "Formatting tag for a new line: Use <newline> tag to add a new line."
-    },
-    "chatformatter.chat.reload": {
-      "permission": "chatformatter.chat.reload",
-      "description": "Permission to reload the plugin using the /chatformatter reload command."
-    },
-    "chatformatter.receiveupdates": {
-      "permission": "chatformatter.receiveupdates",
-      "description": "Permission to receive update announcements for this plugin."
     }
   }
 }

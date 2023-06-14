@@ -21,4 +21,4 @@
 
 ## 🤖👨‍💻💬 Command
 
-ChatFormatter only supports one command `/chatformatter reload` which reloads plugin.
+ChatFormatter only supports one command `/chatformatter` which reloads plugin.

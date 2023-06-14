@@ -1,5 +1,13 @@
 # 🔧 Installation and upgrading
 
+::: warning
+ChatFormatter requires [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) and [Vault](https://www.spigotmc.org/resources/vault.34315/) to work properly!
+:::
+::: tip
+For Minecraft Servers running on Paper, You need to install ChatFormatter-paper extension. You need to install it along regular ChatFormatter plugin to make it work properly.
+:::
+
+
 ## 🛠️ Installation
 
 ### Step 1: Download ⬇️ the plugin and place the jar in the `plugins` folder 📂

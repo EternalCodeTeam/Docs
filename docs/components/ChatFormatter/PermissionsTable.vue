@@ -18,6 +18,34 @@
       </tr>
       </tbody>
     </table>
+    <br />
+    <p>Other permissions included in plugin</p>
+    <table>
+      <thead>
+      <tr>
+        <th>Permission</th>
+        <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>
+          <button @click="copyToClipboard(tag.permission)">chatformatter.chat.reload</button>
+        </td>
+        <td>
+          Permission to reload the plugin using the /chatformatter reload command.
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button @click="copyToClipboard(tag.permission)">chatformatter.receiveupdates</button>
+        </td>
+        <td>
+          Permission to receive update announcements for this plugin.
+        </td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
