@@ -4,7 +4,7 @@
 ChatFormatter requires [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) and [Vault](https://www.spigotmc.org/resources/vault.34315/) to work properly!
 :::
 ::: tip
-For Minecraft Servers running on Paper, You need to install ChatFormatter-paper extension. You need to install it along regular ChatFormatter plugin to make it work properly.
+For Minecraft Servers running on Paper, We recommend installing ChatFormatter-paper extension. You should install it along regular ChatFormatter plugin to make it work properly.
 :::
 
 
@@ -14,7 +14,7 @@ For Minecraft Servers running on Paper, You need to install ChatFormatter-paper 
 After downloading the ChatFormatter JAR file, place it in the "plugins" folder on your Minecraft server. Make sure the file is located in the same directory as other plugins that are already installed.
 
 ### Step 2: Restart the Minecraft server 🔄
-After placing the JAR file in the plugin folder, restart the Minecraft server. The ChatFormatter plugin should be automatically loaded by the server. If the plugin doesn't load correctly, inform us about it in the [Issues](https://github.com/EternalCodeTeam/EternalCore/issues) tab or on our [discord](https://discord.gg/FQ7jmGBd6c) 😎
+After placing the JAR file in the plugin folder, restart the Minecraft server. The ChatFormatter plugin should be automatically loaded by the server. If the plugin doesn't load correctly, inform us about it in the [Issues](https://github.com/EternalCodeTeam/ChatFormatter/issues) tab or on our [discord](https://discord.gg/FQ7jmGBd6c) 😎
 
 ## ⚡ Upgrading
 📝 **Note**: Before starting the upgrade, make sure you back up your ChatFormatter plugin configuration to avoid potential configuration conflicts.

@@ -30,7 +30,7 @@
       <tbody>
       <tr>
         <td>
-          <button @click="copyToClipboard(tag.permission)">chatformatter.chat.reload</button>
+          <button @click="copyToClipboard('chatformatter.chat.reload')">chatformatter.chat.reload</button>
         </td>
         <td>
           Permission to reload the plugin using the /chatformatter reload command.
@@ -38,7 +38,7 @@
       </tr>
       <tr>
         <td>
-          <button @click="copyToClipboard(tag.permission)">chatformatter.receiveupdates</button>
+          <button @click="copyToClipboard('chatformatter.receiveupdates')">chatformatter.receiveupdates</button>
         </td>
         <td>
           Permission to receive update announcements for this plugin.

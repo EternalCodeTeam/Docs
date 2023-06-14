@@ -33,6 +33,7 @@ export default defineConfig({
         nav: [
             { text: 'EternalCore', link: '/eternalcore/introduction' },
             { text: 'ChatFormatter', link: '/chatformatter/introduction' },
+            { text: 'EternalCombat', link: '/eternalcombat/introduction' },
         ],
 
         logo: '/logo.png',
@@ -40,6 +41,7 @@ export default defineConfig({
         sidebar: {
             '/eternalcore/': configureEternalCoreSidebar(),
             '/chatformatter/': configureChatFormatterSidebar(),
+            'eternalcombat/': configureEternalCombatSidebar(),
             '/linuxtutorials/': configureLinuxTutorialSidebar(),
         },
 
@@ -71,6 +73,7 @@ function configureEternalCoreSidebar() {
                 { text: '✨ Features', link: '/eternalcore/features' },
                 { text: '🔔 Notifications', link: '/eternalcore/notifications' },
                 { text: '🏠 Homes', link: '/eternalcore/homes' },
+                { text: 'ℹ️ Contribute', link: '/eternalcore/contribute'}
             ]
         }
     ]
@@ -86,7 +89,23 @@ function configureChatFormatterSidebar() {
                 { text: '🔧 Installation', link: '/chatformatter/installation' },
                 { text: '✨ Features', link: '/chatformatter/features' },
                 { text: '✍️ Examples', link: '/chatformatter/examples' },
+                { text: 'ℹ️ Contribute', link: '/chatformatter/contribute' },
             ]
+        }
+    ]
+}
+
+function configureEternalCombatSidebar() {
+    return [
+        {
+            text: 'EternalCombat',
+            collapsible: true,
+            items: [
+                { text: '🚀 Getting Started', link: '/eternalcombat/introduction' },
+                { text: '🔧 Installation', link: '/eternalcombat/installation' },
+                { text: '✨ Features', link: '/eternalcombat/features' },
+                { text: 'ℹ️ Contribute', link: '/eternalcombat/contribute' },
+        ]
         }
     ]
 }

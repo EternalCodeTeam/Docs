@@ -19,6 +19,9 @@ hero:
     - theme: brand
       text: ChatFormatter Docs
       link: /chatformatter/introduction
+    - theme: brand
+      text: EternalCombat Docs
+      link: /eternalcombat/introduction
 
 
 features:

@@ -1,6 +1,6 @@
 <script setup>
-    import ColorTable from '../components/ChatFormatter/ColorTable.vue';
-    import PermissionsTable from '../components/ChatFormatter/PermissionsTable.vue';
+    import ColorTable from '../components/chatformatter/ColorTable.vue';
+    import PermissionsTable from '../components/chatformatter/PermissionsTable.vue';
 </script>
 # ChatFormatter Features
 

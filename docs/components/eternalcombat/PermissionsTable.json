@@ -1,0 +1,29 @@
+{
+  "PermissionsTable": {
+    "eternalcombat.status": {
+      "permission": "eternalcombat.status",
+      "description": "Users with this permission will be able to see theirs and others combat status.",
+      "command": "/combatlog status <player>"
+    },
+    "eternalcombat.tag": {
+      "permission": "eternalcombat.tag",
+      "description": "Users with this permission will be able to tag players into a fight.",
+      "command": "/combatlog tag <first_player> <optional_second_player>"
+    },
+    "eternalcombat.untag": {
+      "permission": "eternalcombat.untag",
+      "description": "Users with this permission will be able to untag players from a fight.",
+      "command": "/combatlog untag <player>"
+    },
+    "eternalcombat.reload": {
+      "permission": "eternalcombat.reload",
+      "description": "Users with this permission will be able to reload the plugin.",
+      "command": "/combatlog reload"
+    },
+    "eternalcombat.receiveupdates": {
+      "permission": "eternalcombat.receiveupdates",
+      "description": "Allows receiving notifications about new versions of the plugin.",
+      "command": "-"
+    }
+  }
+}
