@@ -6,7 +6,7 @@ We highly recommend using web interface for MiniMessage formatting. Website belo
 
 [MiniMessage Viewer](https://webui.advntr.dev/)
 
-![MiniMessage Viewer](../public/assets/chatformatter/example1.png)
+![MiniMessage Viewer](/assets/chatformatter/example1.png)
 
 
 ## ✍️ Standard formatting and examples
@@ -15,4 +15,4 @@ Our plugin allows users to create custom styles for messages sent inside Minecra
 
 [Formats and styles for MiniMessage](https://docs.advntr.dev/minimessage/format.html)
 
-![Example for transition](../public/assets/chatformatter/example2.png)
+![Example for transition](/assets/chatformatter/example2.png)
