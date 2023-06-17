@@ -41,7 +41,7 @@ export default defineConfig({
         sidebar: {
             '/eternalcore/': configureEternalCoreSidebar(),
             '/chatformatter/': configureChatFormatterSidebar(),
-            'eternalcombat/': configureEternalCombatSidebar(),
+            '/eternalcombat/': configureEternalCombatSidebar(),
             '/linuxtutorials/': configureLinuxTutorialSidebar(),
         },
 
@@ -105,7 +105,7 @@ function configureEternalCombatSidebar() {
                 { text: '🔧 Installation', link: '/eternalcombat/installation' },
                 { text: '✨ Features', link: '/eternalcombat/features' },
                 { text: 'ℹ️ Contribute', link: '/eternalcombat/contribute' },
-        ]
+            ]
         }
     ]
 }
