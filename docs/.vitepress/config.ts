@@ -100,7 +100,7 @@ function configureGitCheckSidebar() {
             collapsible: true,
             items: [
                 { text: '🚀 Getting Started', link: '/gitcheck/introduction' },
-                { text: '✨ Features', link: '/gitcheck/features' },
+                { text: '✨ Usage', link: '/gitcheck/features' },
             ]
         }
     ]
