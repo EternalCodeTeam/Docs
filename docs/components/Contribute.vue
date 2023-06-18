@@ -7,7 +7,7 @@
       the project
       you want to contribute to.
       Or you can access this repository directly, by clicking on the project name here:
-      <a :href="'https://github.com/EternalCodeTeam/' +  name " target="_blank">{{ name }}</a>
+      <a :href='`https://github.com/EternalCodeTeam/${name}`' target="_blank">{{ name }}</a>
     </p>
     <h3> Step 1: Fork the repository 🍴 </h3>
     <p>
@@ -31,7 +31,9 @@
       Change to the repository directory on your computer (if you are not already there):
     </p>
     <code class="language-bash">
+      ```bash
       cd {{ name }}
+      ```
     </code>
     <p>
       Now create a branch using the `git checkout` command:
