@@ -33,6 +33,7 @@ export default defineConfig({
         nav: [
             { text: 'EternalCore', link: '/eternalcore/introduction' },
             { text: 'ChatFormatter', link: '/chatformatter/introduction' },
+            { text: 'GitCheck', link: '/gitcheck/introduction' },
         ],
 
         logo: '/logo.png',
@@ -41,6 +42,7 @@ export default defineConfig({
             '/eternalcore/': configureEternalCoreSidebar(),
             '/chatformatter/': configureChatFormatterSidebar(),
             '/linuxtutorials/': configureLinuxTutorialSidebar(),
+            '/gitcheck/': configureGitCheckSidebar(),
         },
 
         editLink: {
@@ -86,6 +88,20 @@ function configureChatFormatterSidebar() {
                 { text: '🔧 Installation', link: '/chatformatter/installation' },
                 { text: '✨ Features', link: '/chatformatter/features' },
                 { text: '✍️ Examples', link: '/chatformatter/examples' },
+            ]
+        }
+    ]
+}
+
+function configureGitCheckSidebar() {
+    return [
+        {
+            text: 'GitCheck',
+            collapsible: true,
+            items: [
+                { text: '🚀 Getting Started', link: '/gitcheck/introduction' },
+                { text: '🔧 Installation', link: '/gitcheck/installation' },
+                { text: '✨ Features', link: '/gitcheck/features' },
             ]
         }
     ]
