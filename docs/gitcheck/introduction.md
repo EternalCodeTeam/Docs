@@ -1,5 +1,5 @@
 # GitCheck wiki's
-* [Features, Command and Usage](features.md)
+* [Features and Usage](features.md)
 
 # 📩❗️ Installation of GitCheck
 
