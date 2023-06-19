@@ -1,13 +1,14 @@
-# GitCheck wiki's
-* [Features and Usage](features.md)
-
 # 🛠️ How does it work?
 
 GitCheck is a Java library that makes it easy to check for updates to a GitHub repository. It utilizes the GitHub API to retrieve information about the latest release and compares it to the current version of your application. With GitCheck, you can ensure that your users are always running the latest version of your software.
 
-# 📩❗️ Installation of GitCheck
+# GitCheck wiki's
+* [Features and Usage](features.md)
 
-## 🐘 Installation for Gradle builds
+
+## 📩❗️ Installation of GitCheck
+
+### 🐘 Installation for Gradle builds
 
 For projects based on Gradle add the following to your build.gradle file:
 
@@ -19,7 +20,7 @@ implementation("com.eternalcode:gitcheck:1.0.0")
 ```
 After that, you can use GitCheck in your project.
 
-## 🪶 Installation for Maven builds
+### 🪶 Installation for Maven builds
 
 For projects based on Maven add the following to your pom.xml file:
 
