@@ -6,7 +6,7 @@
 - Lightweight and efficient
 - Supports Java 9 and above
 - Utilizes the GitHub API for retrieving release information
-- You can add your own implementation for another platform
+
 
 ## 💯 API Usage
 
