@@ -4,7 +4,7 @@ GitCheck is a Java library that makes it easy to check for updates to a GitHub r
 
 # GitCheck wiki's
 * [Features and Usage](features.md)
-
+* [Contribute](contribute.md)
 
 ## 📩❗️ Installation of GitCheck
 

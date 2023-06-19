@@ -22,6 +22,9 @@ hero:
     - theme: brand
       text: GitCheck Docs
       link: /gitcheck/introduction
+    - theme: brand
+      text: EternalCombat Docs
+      link: /eternalcombat/introduction
 
 
 features:
