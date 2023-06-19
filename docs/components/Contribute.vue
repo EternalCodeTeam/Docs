@@ -23,30 +23,23 @@
     <p>
       Open a terminal and run the following git command:
     </p>
-    <div class="language-bash">
-      <code>
-        git clone "url you just copied"
-      </code>
-    </div>
+    <code class="language-bash">
+      git clone "url you just copied"
+    </code>
     <h3>Step 3: Create a branch 🌿</h3>
     <p>
       Change to the repository directory on your computer (if you are not already there):
     </p>
-    <div class="language-bash">
-      <code>
-        cd {{ name }}
-
-      </code>
-    </div>
+    <code class="language-bash">
+      cd {{ name }}
+    </code>
     <p>
       Now create a branch using the `git checkout` command:
     </p>
-    <div class="language-bash">
-      <code>
-        git checkout -b
-        your-new-branch-name
-      </code>
-    </div>
+    <code class="language-bash">
+      git checkout -b
+      your-new-branch-name
+    </code>
     <h3> Step 4: Make changes and commit 📝 </h3>
     <p>
       Now open the project in your favorite code editor and make the required changes. You can use the `git status`
@@ -59,12 +52,10 @@
     <p>
       Push your changes using the command `git push`:
     </p>
-    <div class="language-bash">
-      <code>
-        git push origin
-        add-your-branch-name
-      </code>
-    </div>
+    <code class="language-bash">
+      git push origin
+      add-your-branch-name
+    </code>
     <h3> Step 6: Submit your changes for review 📩 </h3>
     <p>
       If you go to your repository on GitHub, you will see a `Compare & pull request` button. Click on that button.

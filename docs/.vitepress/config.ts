@@ -75,7 +75,7 @@ function configureEternalCoreSidebar() {
                 { text: '✨ Features', link: '/eternalcore/features' },
                 { text: '🔔 Notifications', link: '/eternalcore/notifications' },
                 { text: '🏠 Homes', link: '/eternalcore/homes' },
-                { text: 'ℹ️ Contribute', link: '/eternalcore/contribute'}
+                { text: '✒️ Contribute', link: '/eternalcore/contribute'}
             ]
         }
     ]
@@ -91,7 +91,7 @@ function configureChatFormatterSidebar() {
                 { text: '🔧 Installation', link: '/chatformatter/installation' },
                 { text: '✨ Features', link: '/chatformatter/features' },
                 { text: '✍️ Examples', link: '/chatformatter/examples' },
-                { text: 'ℹ️ Contribute', link: '/chatformatter/contribute' },
+                { text: '✒️ Contribute', link: '/chatformatter/contribute' },
             ]
         }
     ]
@@ -106,7 +106,7 @@ function configureEternalCombatSidebar() {
                 { text: '🚀 Getting Started', link: '/eternalcombat/introduction' },
                 { text: '🔧 Installation', link: '/eternalcombat/installation' },
                 { text: '✨ Features', link: '/eternalcombat/features' },
-                { text: 'ℹ️ Contribute', link: '/eternalcombat/contribute' },
+                { text: '✒️ Contribute', link: '/eternalcombat/contribute' },
             ]
         }
     ]
@@ -120,6 +120,7 @@ function configureGitCheckSidebar() {
             items: [
                 { text: '🚀 Getting Started', link: '/gitcheck/introduction' },
                 { text: '✨ Usage', link: '/gitcheck/features' },
+                { text: '✒️ Contribute', link: '/gitcheck/contribute' },
             ]
         }
     ]
