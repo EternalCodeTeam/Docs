@@ -4,76 +4,136 @@ This plugin allows sending messages to different parts of Minecraft, including t
 subtitle. All messages can be formatted using [🔍 MiniMessages](https://docs.adventure.kyori.net/minimessage/format.html) or standard color codes. You can also
 use an online [🌐 message generator](https://webui.adventure.kyori.net/)
 
-## 📌 Notification Types 
-
-Messages can be sent with a prefix that defines where the message will be displayed. Available prefixes include:
-
-| Notification Type | Description                        |
-|-------------------|------------------------------------|
-| `[CHAT]`          | Sends a message to the chat.       |
-| `[ACTIONBAR]`     | Sends a message to the action bar. |
-| `[TITLE]`         | Sends a message to the title.      |
-| `[SUBTITLE]`      | Sends a message to the subtitle.   |
-| `[DISABLED]`      | Turns off the message.             |
-
 ## 📝 Example usage
-
-Single messages can be sent using the following syntax:
+Syntax for sending notifications:
 
 ::: code-group
 
-```yaml [CHAT]
+```yaml [Chat + Multiline chat]
 # Displays a message in the chat.
-example: "[CHAT] Hello world!" 
-example2: "Hello world!" # If no prefix is entered, the message will be sent to the chat.
+example: "Hello world!" # <- Single one line text
+example2: # <- If you want display multiple lines in the chat, use the following syntax:
+  - "Hello"
+  - "world!" 
 ```
 
-```yaml [ACTIONBAR]
+```yaml [Actionbar]
 # Displays a message in the action bar.
-example: "[ACTIONBAR] Hello world!"
+example:
+  actionbar: "Hello world!"
 ```
 
-```yaml [TITLE]
+```yaml [Title]
 # Displays a message in the title.
-example: "[TITLE] Hello world!"
+example:
+  title: "Hello world!"
 ```
 
-```yaml [SUBTITLE]
+```yaml [Subtitle]
 # Displays a message in the subtitle.
-example: "[SUBTITLE] Hello world!"
+example:
+  subtitle: "Hello world!"
 ```
 
-```yaml [DISABLED]
-# Does not display a message.
-example: "[DISABLED]" 
+```yaml [Title with times]
+# Displays a message in the title or subtitle with specified times.
+# THIS also working for subtitle
+example:
+  title: "Hello world!"
+  times: "1s 2s 1s" # <- The first number is the time it takes to fade in, the second is the time it takes to stay on the screen, and the third is the time it takes to fade out.
+```
+
+```yaml [Sounds]
+# Plays a sound with the specified volume and pitch.
+example:
+  sound: "ENTITY_PLAYER_LEVELUP 2.0 1.0" # <- The first number is the volume, the second is the pitch.
+```
+
+ 
+```yaml [Sounds + Category]
+# Plays a sound with the specified volume and pitch.
+example:
+  # Sound categories: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/SoundCategory.html
+  sound: "PLAYER_LEVELUP WEATHER 2.0 1.0" # <- The first number is the volume, the second is the pitch.
+  # If you want to play a sound in a certain category, for example if a player has the sound category "WEATHER" in the game settings set to 0%, the sound will not play.
 ```
 
 :::
 
-Prefixes can be combined to display messages in different places at the same time. For example:
+### Examples combining multiple notifications:
+👑 Unleash your creativity and design your own custom notifications without any limits!
 
-::: code-group
-
-```yaml [CHAT + ACTIONBAR]
+#### Chat + Actionbar
+```yaml
  # Displays a message in the chat and action bar.
- example: "[CHAT, ACTIONBAR] Hello world!"
+ example:
+    chat: "Hello world!"
+    actionbar: "Hello world!"
 ```
 
-```yaml [TITLE + SUBTITLE]
+#### Title + Subtitle
+```yaml 
 # Displays a message in the title and subtitle.
-example: "[TITLE, SUBTITLE] Hello world!" 
+example: 
+    title: "Hello world!"
+    subtitle: "Hello world!"
 ```
 
-```yaml [CHAT + ACTIONBAR + TITLE + SUBTITLE]
+#### Title + Subtitle with specified times
+```yaml
+# Displays a message in the title and subtitle.
+example: 
+    title: "Hello world!"
+    subtitle: "Hello world!"
+    times: "1s 2s 1s" # <- The first number is the time it takes to fade in, the second is the time it takes to stay on the screen, and the third is the time it takes to fade out.
+```
+
+#### Chat + Actionbar + Title + Subtitle
+```yaml 
 # Displays a message in the chat, action bar, title, and subtitle.
-example: "[CHAT, ACTIONBAR, TITLE, SUBTITLE] Hello world!" 
+example: 
+    chat: "Hello world!"
+    actionbar: "Hello world!"
+    title: "Hello world!"
+    subtitle: "Hello world!"
 ```
 
-```yaml [DISABLED]
+#### Chat + Actionbar + Title + Subtitle with specified times
+```yaml 
+# Displays a message in the chat, action bar, title, and subtitle with specified times for title and subtitle
+example: 
+    chat: "Hello world!"
+    actionbar: "Hello world!"
+    title: "Hello world!"
+    subtitle: "Hello world!"
+    times: "1s 2s 1s" # <- The first number is the time it takes to fade in, the second is the time it takes to stay on the screen, and the third is the time it takes to fade out.
+```
+
+#### Chat + Actionbar + Title + Subtitle + Sound
+```yaml 
+# Displays a message in the chat, action bar, title, and subtitle with specified times for title and subtitle
+example: 
+    chat: "Hello world!"
+    actionbar: "Hello world!"
+    title: "Hello world!"
+    subtitle: "Hello world!"
+    sound: "ENTITY_PLAYER_LEVELUP 2.0 1.0" # <- The first number is the volume, the second is the pitch.
+```
+
+#### Chat + Actionbar + Title + Subtitle + Sound + Category
+```yaml 
+# Displays a message in the chat, action bar, title, and subtitle with specified times for title and subtitle
+example: 
+    chat: "Hello world!"
+    actionbar: "Hello world!"
+    title: "Hello world!"
+    subtitle: "Hello world!"
+    sound: "ENTITY_PLAYER_LEVELUP WEATHER 2.0 1.0" # <- The first number is the volume, the second is the pitch.
+    # If you want to play a sound in a certain category, for example if a player has the sound category "WEATHER" in the game settings set to 0%, the sound will not play.
+```
+
+#### Disable message
+```yaml 
 # Does not display a message.
-example: "[DISABLED]" 
+example: [] 
 ```
-
-:::
-
-If no prefix is entered, the message will be sent to the chat. So, be sure to include your desired prefix when configuring plugin! 🙌

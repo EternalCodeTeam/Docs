@@ -2,14 +2,6 @@
     max-width: 100% !important;
 }
 
-.content {
-    max-width: 100% !important;
-}
-
 .VPContent.has-sidebar {
-    padding-right: unset !important;
-}
-
-.VPNavBar.has-sidebar .content {
-    padding-right: 30px !important;
+    padding-right: calc((0vw - var(--vp-layout-max-width)) / 2) !important;
 }
