@@ -20,6 +20,9 @@ hero:
       text: ChatFormatter Docs
       link: /chatformatter/introduction
     - theme: brand
+      text: GitCheck Docs
+      link: /gitcheck/introduction
+    - theme: brand
       text: EternalCombat Docs
       link: /eternalcombat/introduction
 

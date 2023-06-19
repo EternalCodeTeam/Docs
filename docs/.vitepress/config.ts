@@ -34,6 +34,7 @@ export default defineConfig({
             { text: 'EternalCore', link: '/eternalcore/introduction' },
             { text: 'ChatFormatter', link: '/chatformatter/introduction' },
             { text: 'EternalCombat', link: '/eternalcombat/introduction' },
+            { text: 'GitCheck', link: '/gitcheck/introduction' },
         ],
 
         logo: '/logo.png',
@@ -43,6 +44,7 @@ export default defineConfig({
             '/chatformatter/': configureChatFormatterSidebar(),
             '/eternalcombat/': configureEternalCombatSidebar(),
             '/linuxtutorials/': configureLinuxTutorialSidebar(),
+            '/gitcheck/': configureGitCheckSidebar(),
         },
 
         editLink: {
@@ -105,6 +107,19 @@ function configureEternalCombatSidebar() {
                 { text: '🔧 Installation', link: '/eternalcombat/installation' },
                 { text: '✨ Features', link: '/eternalcombat/features' },
                 { text: 'ℹ️ Contribute', link: '/eternalcombat/contribute' },
+            ]
+        }
+    ]
+}
+
+function configureGitCheckSidebar() {
+    return [
+        {
+            text: 'GitCheck',
+            collapsible: true,
+            items: [
+                { text: '🚀 Getting Started', link: '/gitcheck/introduction' },
+                { text: '✨ Usage', link: '/gitcheck/features' },
             ]
         }
     ]
