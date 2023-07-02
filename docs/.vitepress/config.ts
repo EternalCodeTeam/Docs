@@ -1,4 +1,3 @@
-import { SearchPlugin } from "vitepress-plugin-search";
 import { defineConfig } from "vitepress";
 
 export default defineConfig({
@@ -17,16 +16,7 @@ export default defineConfig({
     },
 
     vite: {
-        plugins: [ SearchPlugin({
-            previewLength: 10,
-            buttonLabel: 'Search',
-            placeholder: 'Search',
-            allow: [],
-            ignore: [],
-            cache: true,
-            tokenize: 'full',
-            preset: 'score',
-        }) ]
+        plugins: [ ],
     },
 
     themeConfig: {
@@ -36,6 +26,10 @@ export default defineConfig({
             { text: 'EternalCombat', link: '/eternalcombat/introduction' },
             { text: 'GitCheck', link: '/gitcheck/introduction' },
         ],
+
+        search: {
+            provider: 'local'
+        },
 
         logo: '/logo.png',
 
