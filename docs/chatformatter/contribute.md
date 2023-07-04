@@ -18,7 +18,7 @@ Now clone the forked repository to your machine. Go to your GitHub account, open
 
 Open a terminal and run the following git command:
 ```bash
-git clone "url you just copied"
+git clone "{URL you just copied}"
 ```
 
 ### Step 3: Create a branch 🌿
