@@ -148,8 +148,8 @@ example:
 
 #### Clear title/subtitle before send new
 
-````yaml
+```yaml
 # Clears the title and subtitle before sending a new one.
 example:
-  titleHide : true
+  titleHide: true
 ```
