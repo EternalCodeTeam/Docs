@@ -1,14 +1,13 @@
-<script setup>
-const name = "EternalCore";
-const url = "https://github.com/EternalCodeTeam/EternalCore";
-</script>
+# You are welcome to contribute to our open-source projects! 🤝
 
-# You are welcome to contribute to {{ name }}! 🤝
+## How to contribute?
 
-## How to contribute to {{ name }}?
-
-Our repository you can find by checking our [GitHub](https://github.com/EternalCodeTeam) and selecting the project you want to contribute to, in this case: {{name}}.
-Or you can just follow this link directly to the <a :href="url" target="_blank" rel="noreferrer">{{name}}</a>.
+You can find our repository by checking our [GitHub](https://github.com/EternalCodeTeam) and selecting the project you want to contribute to.
+Or you can just follow these links directly to the corresponding projects:
+- [ChatFormatter](https://github.com/EternalCodeTeam/ChatFormatter)
+- [EternalCore](https://github.com/EternalCodeTeam/EternalCore)
+- [GitCheck](https://github.com/EternalCodeTeam/GitCheck)
+- [EternalCombat](https://github.com/EternalCodeTeam/EternalCombat).
 
 ### Step 1: Fork the repository 🍴
 Fork the repository by clicking the "Fork" button on the top, right corner of the page. This will create a copy of the repository in your account.
@@ -25,7 +24,7 @@ git clone "url you just copied"
 Change to the repository directory on your computer (if you are not already there):
 
 ```bash-vue
-cd {{ name }}
+cd "project name"
 ```
 
 Now create a branch using the git checkout command:
@@ -51,3 +50,4 @@ Now submit the pull request. After that, our team will review your code and merg
 
 ### Step 7: 🎉 Congratulations! 🎉
 You have successfully made a contribution to this project. :>
+
