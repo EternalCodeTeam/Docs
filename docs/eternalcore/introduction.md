@@ -7,3 +7,4 @@ Plugin includes full support for teleportation, warps, homes and chat management
 * [Installation and upgrading](installation.md)
 * [Features, Commands and Permissions](features.md)
 * [Notifications](notifications.md)
+* [Homes](homes.md)
