@@ -14,7 +14,7 @@ hero:
       text: Visit our Github
       link: https://github.com/EternalCodeTeam/
     - theme: brand
-      text: EternalCore Docs
+      text: See documentation
       link: /eternalcore/introduction
 
 

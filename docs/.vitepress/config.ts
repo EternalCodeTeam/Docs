@@ -47,12 +47,12 @@ export default defineConfig({
         ,
 
         sidebar: {
-            "/chatformatter/": configureChatFormatterSidebar(),
-            "/eternalcombat/": configureEternalCombatSidebar(),
-            "/eternalcore/": configureEternalCoreSidebar(),
-            "/gitcheck/": configureGitCheckSidebar(),
-            "/linuxtutorials/": configureLinuxTutorialSidebar(),
-            "/contribute/": configureContributeSidebar(),
+            "/chatformatter/": configureSidebar( "ChatFormatter"),
+            "/eternalcombat/": configureSidebar( "EternalCombat"),
+            "/eternalcore/": configureSidebar( "EternalCore"),
+            "/gitcheck/": configureSidebar( "GitCheck"),
+            "/linuxtutorials/": configureSidebar( "LinuxTutorials"),
+            "/contribute/": configureSidebar( "Contribute"),
         },
 
         socialLinks: [
@@ -64,11 +64,12 @@ export default defineConfig({
 })
 ;
 
-function configureEternalCoreSidebar() {
+function configureSidebar( currentPath: string ) {
     return [
         {
             text: "EternalCore",
             collapsible: true,
+            collapsed: currentPath != "EternalCore",
             items: [
                 {text: "🚀 Getting Started", link: "/eternalcore/introduction"},
                 {text: "🔧 Installation", link: "/eternalcore/installation"},
@@ -78,21 +79,9 @@ function configureEternalCoreSidebar() {
             ],
         },
         {
-            text: "🤩 Contribute",
-            collapsible: true,
-            collapsed: true,
-            items: [
-                {text: "🪜 Guide", link: "/contribute/guide"},
-            ]
-        }
-    ];
-}
-
-function configureChatFormatterSidebar() {
-    return [
-        {
             text: "ChatFormatter",
             collapsible: true,
+            collapsed: currentPath != "ChatFormatter",
             items: [
                 {text: "🚀 Getting Started", link: "/chatformatter/introduction"},
                 {text: "🔧 Installation", link: "/chatformatter/installation"},
@@ -101,21 +90,9 @@ function configureChatFormatterSidebar() {
             ]
         },
         {
-            text: "🤩 Contribute",
-            collapsible: true,
-            collapsed: true,
-            items: [
-                {text: "🪜 Guide", link: "/contribute/guide"},
-            ]
-        }
-    ];
-}
-
-function configureEternalCombatSidebar() {
-    return [
-        {
             text: "EternalCombat",
             collapsible: true,
+            collapsed: currentPath != "EternalCombat",
             items: [
                 {text: "🚀 Getting Started", link: "/eternalcombat/introduction"},
                 {text: "🔧 Installation", link: "/eternalcombat/installation"},
@@ -123,43 +100,18 @@ function configureEternalCombatSidebar() {
             ]
         },
         {
-            text: "🤩 Contribute",
-            collapsible: true,
-            collapsed: true,
-            items: [
-                {text: "🪜 Guide", link: "/contribute/guide"},
-            ]
-        }
-    ];
-}
-
-function configureGitCheckSidebar() {
-    return [
-        {
             text: "GitCheck",
             collapsible: true,
+            collapsed: currentPath != "GitCheck",
             items: [
                 {text: "🚀 Getting Started", link: "/gitcheck/introduction"},
                 {text: "✨ Usage", link: "/gitcheck/features"},
             ]
         },
         {
-            text: "🤩 Contribute",
-            collapsible: true,
-            collapsed: true,
-            items: [
-                {text: "🪜 Guide", link: "/contribute/guide"},
-            ]
-        }
-    ];
-}
-
-
-function configureLinuxTutorialSidebar() {
-    return [
-        {
             text: "Linux Tutorials",
             collapsible: true,
+            collapsed: currentPath != "LinuxTutorials",
             items: [
                 {text: "Getting Started", link: "/linuxtutorials/introduction"},
                 {text: "Java", link: "/linuxtutorials/tutorials/java"},
@@ -170,7 +122,7 @@ function configureLinuxTutorialSidebar() {
         {
             text: "🤩 Contribute",
             collapsible: true,
-            collapsed: true,
+            collapsed: currentPath != "Contribute",
             items: [
                 {text: "🪜 Guide", link: "/contribute/guide"},
             ]
@@ -178,24 +130,4 @@ function configureLinuxTutorialSidebar() {
     ];
 }
 
-function configureContributeSidebar() {
-    return [
-        {
-            text: "Our Projects",
-            collapsible: true,
-            items: [
-                {text: "EternalCore", link: "/eternalcore/introduction"},
-                {text: "ChatFormatter", link: "/chatformatter/introduction"},
-                {text: "EternalCombat", link: "/eternalcombat/introduction"},
-                {text: "GitCheck", link: "/gitcheck/introduction"}
-            ]
-        },
-        {
-            text: "🤩Contribute",
-            collapsible: true,
-            items: [
-                {text: "🪜 Guide", link: "/contribute/guide"}
-            ]
-        }
-    ];
-}
+
