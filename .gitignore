@@ -1,5 +1,9 @@
 node_modules
 yarn.lock
-.idea
 dist
 docs/.vitepress/cache
+
+# Ignore all files inside .idea folder except codeStyles folder
+.idea/*
+!.idea/codeStyles/codeStyleDocs.xml
+
