@@ -2,7 +2,7 @@ import {defineConfig} from "vitepress";
 
 export default defineConfig({
     head: [
-        ["link", { rel: "icon", href: "/logo.png" }]
+        ["link", {rel: "icon", href: "/logo.png"}]
     ],
 
     lang: "en-US",
@@ -34,10 +34,10 @@ export default defineConfig({
         logo: "/logo.png",
 
         nav: [
-            { text: "EternalCore", link: "/eternalcore/introduction" },
-            { text: "ChatFormatter", link: "/chatformatter/introduction" },
-            { text: "EternalCombat", link: "/eternalcombat/introduction" },
-            { text: "GitCheck", link: "/gitcheck/introduction" }
+            {text: "EternalCore", link: "/eternalcore/introduction"},
+            {text: "ChatFormatter", link: "/chatformatter/introduction"},
+            {text: "EternalCombat", link: "/eternalcombat/introduction"},
+            {text: "GitCheck", link: "/gitcheck/introduction"}
         ],
 
 
@@ -51,12 +51,13 @@ export default defineConfig({
             "/eternalcombat/": configureEternalCombatSidebar(),
             "/eternalcore/": configureEternalCoreSidebar(),
             "/gitcheck/": configureGitCheckSidebar(),
-            "/linuxtutorials/": configureLinuxTutorialSidebar()
+            "/linuxtutorials/": configureLinuxTutorialSidebar(),
+            "/contribute/": configureContributeSidebar(),
         },
 
         socialLinks: [
-            { icon: "github", link: "https://github.com/EternalCodeTeam/" },
-            { icon: "discord", link: "https://discord.gg/FQ7jmGBd6c" },
+            {icon: "github", link: "https://github.com/EternalCodeTeam/"},
+            {icon: "discord", link: "https://discord.gg/FQ7jmGBd6c"},
         ]
         ,
     }
@@ -69,21 +70,20 @@ function configureEternalCoreSidebar() {
             text: "EternalCore",
             collapsible: true,
             items: [
-                { text: "🚀 Getting Started", link: "/eternalcore/introduction" },
-                { text: "🔧 Installation", link: "/eternalcore/installation" },
-                { text: "✨ Features", link: "/eternalcore/features" },
-                { text: "🔔 Notifications", link: "/eternalcore/notifications" },
-                { text: "🏠 Homes", link: "/eternalcore/homes" },
-                {
-                    text: "🤩 Contribute",
-                    collapsible: true,
-                    collapsed: true,
-                    items: [
-                        { text: "Step by step guide", link: "/contribute/contribute" },
-                    ]
-                }
+                {text: "🚀 Getting Started", link: "/eternalcore/introduction"},
+                {text: "🔧 Installation", link: "/eternalcore/installation"},
+                {text: "✨ Features", link: "/eternalcore/features"},
+                {text: "🔔 Notifications", link: "/eternalcore/notifications"},
+                {text: "🏠 Homes", link: "/eternalcore/homes"},
             ],
-
+        },
+        {
+            text: "🤩 Contribute",
+            collapsible: true,
+            collapsed: true,
+            items: [
+                {text: "🪜 Guide", link: "/contribute/guide"},
+            ]
         }
     ];
 }
@@ -94,18 +94,18 @@ function configureChatFormatterSidebar() {
             text: "ChatFormatter",
             collapsible: true,
             items: [
-                { text: "🚀 Getting Started", link: "/chatformatter/introduction" },
-                { text: "🔧 Installation", link: "/chatformatter/installation" },
-                { text: "✨ Features", link: "/chatformatter/features" },
-                { text: "✍️ Examples", link: "/chatformatter/examples" },
-                {
-                    text: "🤩 Contribute",
-                    collapsible: true,
-                    collapsed: true,
-                    items: [
-                        { text: "Step by step guide", link: "/contribute/contribute" },
-                    ]
-                }
+                {text: "🚀 Getting Started", link: "/chatformatter/introduction"},
+                {text: "🔧 Installation", link: "/chatformatter/installation"},
+                {text: "✨ Features", link: "/chatformatter/features"},
+                {text: "✍️ Examples", link: "/chatformatter/examples"},
+            ]
+        },
+        {
+            text: "🤩 Contribute",
+            collapsible: true,
+            collapsed: true,
+            items: [
+                {text: "🪜 Guide", link: "/contribute/guide"},
             ]
         }
     ];
@@ -117,17 +117,17 @@ function configureEternalCombatSidebar() {
             text: "EternalCombat",
             collapsible: true,
             items: [
-                { text: "🚀 Getting Started", link: "/eternalcombat/introduction" },
-                { text: "🔧 Installation", link: "/eternalcombat/installation" },
-                { text: "✨ Features", link: "/eternalcombat/features" },
-                {
-                    text: "🤩 Contribute",
-                    collapsible: true,
-                    collapsed: true,
-                    items: [
-                        { text: "Step by step guide", link: "/contribute/contribute" },
-                    ]
-                }
+                {text: "🚀 Getting Started", link: "/eternalcombat/introduction"},
+                {text: "🔧 Installation", link: "/eternalcombat/installation"},
+                {text: "✨ Features", link: "/eternalcombat/features"},
+            ]
+        },
+        {
+            text: "🤩 Contribute",
+            collapsible: true,
+            collapsed: true,
+            items: [
+                {text: "🪜 Guide", link: "/contribute/guide"},
             ]
         }
     ];
@@ -139,16 +139,16 @@ function configureGitCheckSidebar() {
             text: "GitCheck",
             collapsible: true,
             items: [
-                { text: "🚀 Getting Started", link: "/gitcheck/introduction" },
-                { text: "✨ Usage", link: "/gitcheck/features" },
-                {
-                    text: "🤩 Contribute",
-                    collapsible: true,
-                    collapsed: true,
-                    items: [
-                        { text: "Step by step guide", link: "/contribute/contribute" },
-                    ]
-                }
+                {text: "🚀 Getting Started", link: "/gitcheck/introduction"},
+                {text: "✨ Usage", link: "/gitcheck/features"},
+            ]
+        },
+        {
+            text: "🤩 Contribute",
+            collapsible: true,
+            collapsed: true,
+            items: [
+                {text: "🪜 Guide", link: "/contribute/guide"},
             ]
         }
     ];
@@ -161,19 +161,41 @@ function configureLinuxTutorialSidebar() {
             text: "Linux Tutorials",
             collapsible: true,
             items: [
-                { text: "Getting Started", link: "/linuxtutorials/introduction" },
-                { text: "Java", link: "/linuxtutorials/tutorials/java" },
-                { text: "LAMP (Ubuntu 18.04-22.04)", link: "/linuxtutorials/tutorials/lamp" },
-                {
-                    text: "🤩 Contribute",
-                    collapsible: true,
-                    collapsed: true,
-                    items: [
-                        { text: "Step by step guide", link: "/contribute/contribute" },
-                    ]
-                }
+                {text: "Getting Started", link: "/linuxtutorials/introduction"},
+                {text: "Java", link: "/linuxtutorials/tutorials/java"},
+                {text: "LAMP (Ubuntu 18.04-22.04)", link: "/linuxtutorials/tutorials/lamp"},
+
+            ]
+        },
+        {
+            text: "🤩 Contribute",
+            collapsible: true,
+            collapsed: true,
+            items: [
+                {text: "🪜 Guide", link: "/contribute/guide"},
             ]
         }
     ];
 }
 
+function configureContributeSidebar() {
+    return [
+        {
+            text: "Our Projects",
+            collapsible: true,
+            items: [
+                {text: "EternalCore", link: "/eternalcore/introduction"},
+                {text: "ChatFormatter", link: "/chatformatter/introduction"},
+                {text: "EternalCombat", link: "/eternalcombat/introduction"},
+                {text: "GitCheck", link: "/gitcheck/introduction"}
+            ]
+        },
+        {
+            text: "🤩Contribute",
+            collapsible: true,
+            items: [
+                {text: "🪜 Guide", link: "/contribute/guide"}
+            ]
+        }
+    ];
+}
