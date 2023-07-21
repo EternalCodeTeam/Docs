@@ -1,14 +1,13 @@
-import { SearchPlugin } from "vitepress-plugin-search";
-import { defineConfig } from "vitepress";
+import {defineConfig} from "vitepress";
 
 export default defineConfig({
     head: [
-        ['link', { rel: 'icon', href: '/logo.png' }]
+        ["link", {rel: "icon", href: "/logo.png"}]
     ],
 
-    lang: 'en-US',
-    title: 'EternalCode.pl',
-    description: 'All documentations of EternalCodeTeam Projects & Tutorials',
+    lang: "en-US",
+    title: "EternalCode.pl",
+    description: "All documentations of EternalCodeTeam Projects & Tutorials",
 
     lastUpdated: true,
 
@@ -17,125 +16,106 @@ export default defineConfig({
     },
 
     vite: {
-        plugins: [ SearchPlugin({
-            previewLength: 10,
-            buttonLabel: 'Search',
-            placeholder: 'Search',
-            allow: [],
-            ignore: [],
-            cache: true,
-            tokenize: 'full',
-            preset: 'score',
-        }) ]
+        plugins: [],
     },
 
     themeConfig: {
-        nav: [
-            { text: 'EternalCore', link: '/eternalcore/introduction' },
-            { text: 'ChatFormatter', link: '/chatformatter/introduction' },
-            { text: 'EternalCombat', link: '/eternalcombat/introduction' },
-            { text: 'GitCheck', link: '/gitcheck/introduction' },
-        ],
-
-        logo: '/logo.png',
-
-        sidebar: {
-            '/eternalcore/': configureEternalCoreSidebar(),
-            '/chatformatter/': configureChatFormatterSidebar(),
-            '/eternalcombat/': configureEternalCombatSidebar(),
-            '/linuxtutorials/': configureLinuxTutorialSidebar(),
-            '/gitcheck/': configureGitCheckSidebar(),
+        editLink: {
+            pattern: "https://github.com/EternalCodeTeam/docs/edit/master/docs/:path",
+            text: "Edit this page on GitHub"
         },
 
-        editLink: {
-            pattern: 'https://github.com/EternalCodeTeam/docs/edit/master/docs/:path',
-            text: 'Edit this page on GitHub'
+        footer:
+            {
+                message: "Made by Martin Sulikowski with ❤️",
+                copyright: "Copyright © 2021-present EternalCodeTeam"
+            },
+
+        logo: "/logo.png",
+
+        nav: [
+            {text: "EternalCore", link: "/eternalcore/introduction"},
+            {text: "ChatFormatter", link: "/chatformatter/introduction"},
+            {text: "EternalCombat", link: "/eternalcombat/introduction"},
+            {text: "GitCheck", link: "/gitcheck/introduction"}
+        ],
+
+
+        search: {
+            provider: "local"
+        }
+        ,
+
+        sidebar: {
+            "/chatformatter/": configureSidebar( "ChatFormatter"),
+            "/eternalcombat/": configureSidebar( "EternalCombat"),
+            "/eternalcore/": configureSidebar( "EternalCore"),
+            "/gitcheck/": configureSidebar( "GitCheck"),
+            "/contribute/": configureSidebar( "Contribute"),
         },
 
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/EternalCodeTeam/' },
-            { icon: 'discord', link: 'https://discord.gg/FQ7jmGBd6c' },
-        ],
-
-        footer: {
-            message: 'Made by Martin Sulikowski with ❤️',
-            copyright: 'Copyright © 2021-present EternalCodeTeam'
-        },
+            {icon: "github", link: "https://github.com/EternalCodeTeam/"},
+            {icon: "discord", link: "https://discord.gg/FQ7jmGBd6c"},
+        ]
+        ,
     }
 })
+;
 
-function configureEternalCoreSidebar() {
+function configureSidebar( currentPath: string ) {
     return [
         {
-            text: 'EternalCore',
+            text: "EternalCore",
             collapsible: true,
+            collapsed: currentPath != "EternalCore",
             items: [
-                { text: '🚀 Getting Started', link: '/eternalcore/introduction' },
-                { text: '🔧 Installation', link: '/eternalcore/installation' },
-                { text: '✨ Features', link: '/eternalcore/features' },
-                { text: '🔔 Notifications', link: '/eternalcore/notifications' },
-                { text: '🏠 Homes', link: '/eternalcore/homes' },
-                { text: '✒️ Contribute', link: '/eternalcore/contribute'}
+                {text: "🚀 Getting Started", link: "/eternalcore/introduction"},
+                {text: "🔧 Installation", link: "/eternalcore/installation"},
+                {text: "✨ Features", link: "/eternalcore/features"},
+                {text: "🔔 Notifications", link: "/eternalcore/notifications"},
+                {text: "🏠 Homes", link: "/eternalcore/homes"},
+            ],
+        },
+        {
+            text: "ChatFormatter",
+            collapsible: true,
+            collapsed: currentPath != "ChatFormatter",
+            items: [
+                {text: "🚀 Getting Started", link: "/chatformatter/introduction"},
+                {text: "🔧 Installation", link: "/chatformatter/installation"},
+                {text: "✨ Features", link: "/chatformatter/features"},
+                {text: "✍️ Examples", link: "/chatformatter/examples"},
+            ]
+        },
+        {
+            text: "EternalCombat",
+            collapsible: true,
+            collapsed: currentPath != "EternalCombat",
+            items: [
+                {text: "🚀 Getting Started", link: "/eternalcombat/introduction"},
+                {text: "🔧 Installation", link: "/eternalcombat/installation"},
+                {text: "✨ Features", link: "/eternalcombat/features"},
+            ]
+        },
+        {
+            text: "GitCheck",
+            collapsible: true,
+            collapsed: currentPath != "GitCheck",
+            items: [
+                {text: "🚀 Getting Started", link: "/gitcheck/introduction"},
+                {text: "✨ Usage", link: "/gitcheck/features"},
+            ]
+        },
+        {
+            text: "🤩 Contribute",
+            collapsible: true,
+            collapsed: currentPath != "Contribute",
+            items: [
+                {text: "📝 Guide", link: "/contribute/guide"},
             ]
         }
-    ]
+    ];
 }
 
-function configureChatFormatterSidebar() {
-    return [
-        {
-            text: 'ChatFormatter',
-            collapsible: true,
-            items: [
-                { text: '🚀 Getting Started', link: '/chatformatter/introduction' },
-                { text: '🔧 Installation', link: '/chatformatter/installation' },
-                { text: '✨ Features', link: '/chatformatter/features' },
-                { text: '✍️ Examples', link: '/chatformatter/examples' },
-                { text: '✒️ Contribute', link: '/chatformatter/contribute' },
-            ]
-        }
-    ]
-}
 
-function configureEternalCombatSidebar() {
-    return [
-        {
-            text: 'EternalCombat',
-            collapsible: true,
-            items: [
-                { text: '🚀 Getting Started', link: '/eternalcombat/introduction' },
-                { text: '🔧 Installation', link: '/eternalcombat/installation' },
-                { text: '✨ Features', link: '/eternalcombat/features' },
-                { text: '✒️ Contribute', link: '/eternalcombat/contribute' },
-            ]
-        }
-    ]
-}
-
-function configureGitCheckSidebar() {
-    return [
-        {
-            text: 'GitCheck',
-            collapsible: true,
-            items: [
-                { text: '🚀 Getting Started', link: '/gitcheck/introduction' },
-                { text: '✨ Usage', link: '/gitcheck/features' },
-                { text: '✒️ Contribute', link: '/gitcheck/contribute' },
-            ]
-        }
-    ]
-}
-
-function configureLinuxTutorialSidebar() {
-    return [
-        {
-            text: 'Linux Tutorials',
-            collapsible: true,
-            items: [
-                { text: 'Getting Started', link: '/linuxtutorials/introduction' },
-                { text: 'Java', link: '/linuxtutorials/tutorials/java' },
-                { text: 'LAMP (Ubuntu 18.04-22.04)', link: '/linuxtutorials/tutorials/lamp' },
-            ]
-        }
-    ]
-}

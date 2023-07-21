@@ -14,17 +14,9 @@ hero:
       text: Visit our Github
       link: https://github.com/EternalCodeTeam/
     - theme: brand
-      text: EternalCore Docs
+      text: See documentation
       link: /eternalcore/introduction
-    - theme: brand
-      text: ChatFormatter Docs
-      link: /chatformatter/introduction
-    - theme: brand
-      text: GitCheck Docs
-      link: /gitcheck/introduction
-    - theme: brand
-      text: EternalCombat Docs
-      link: /eternalcombat/introduction
+
 
 
 features:
