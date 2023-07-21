@@ -51,7 +51,6 @@ export default defineConfig({
             "/eternalcombat/": configureSidebar( "EternalCombat"),
             "/eternalcore/": configureSidebar( "EternalCore"),
             "/gitcheck/": configureSidebar( "GitCheck"),
-            "/linuxtutorials/": configureSidebar( "LinuxTutorials"),
             "/contribute/": configureSidebar( "Contribute"),
         },
 
@@ -109,22 +108,11 @@ function configureSidebar( currentPath: string ) {
             ]
         },
         {
-            text: "Linux Tutorials",
-            collapsible: true,
-            collapsed: currentPath != "LinuxTutorials",
-            items: [
-                {text: "Getting Started", link: "/linuxtutorials/introduction"},
-                {text: "Java", link: "/linuxtutorials/tutorials/java"},
-                {text: "LAMP (Ubuntu 18.04-22.04)", link: "/linuxtutorials/tutorials/lamp"},
-
-            ]
-        },
-        {
             text: "🤩 Contribute",
             collapsible: true,
             collapsed: currentPath != "Contribute",
             items: [
-                {text: "🪜 Guide", link: "/contribute/guide"},
+                {text: "📝 Guide", link: "/contribute/guide"},
             ]
         }
     ];
