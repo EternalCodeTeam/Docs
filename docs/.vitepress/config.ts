@@ -9,6 +9,8 @@ export default defineConfig({
 
   lastUpdated: true,
 
+  mpa: true,
+
   cleanUrls: true,
 
   markdown: {
