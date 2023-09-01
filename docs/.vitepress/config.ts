@@ -74,6 +74,7 @@ function configureSidebar( currentPath: string ) {
                 {text: "🔧 Installation", link: "/eternalcore/installation"},
                 {text: "✨ Features", link: "/eternalcore/features"},
                 {text: "📖 Text center", link: "/eternalcore/center"},
+                {text: "📑 Placeholders", link: "/eternalcore/placeholders"},
                 {text: "🔔 Notifications", link: "/eternalcore/notifications"},
                 {text: "🏠 Homes", link: "/eternalcore/homes"},
             ],

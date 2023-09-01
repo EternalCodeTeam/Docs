@@ -2,7 +2,7 @@
 
 ## ⚠ The `<center>` tag is not responsive and operates optimally under general interface settings.
 
-## How to use:
+## How to use
 Here's the appropriate syntax of using the tag:
 
 This syntax example represents a correct use of the tag:
