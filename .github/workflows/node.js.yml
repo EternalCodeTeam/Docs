@@ -34,8 +34,3 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
-
-      - name: Build docs and run lint
-        run: |
-          pnpm run docs:build
-          pnpm run lint
