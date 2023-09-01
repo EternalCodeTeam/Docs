@@ -8,10 +8,11 @@ export default defineConfig({
   description: "All documentations of EternalCodeTeam Projects & Tutorials",
 
   lastUpdated: true,
-
-  mpa: true,
-
   cleanUrls: true,
+
+  sitemap: {
+    hostname: 'https://eternalcode.pl/'
+  },
 
   markdown: {
     lineNumbers: true,
