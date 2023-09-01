@@ -7,12 +7,12 @@ Here's the appropriate syntax of using the tag:
 
 This syntax example represents a correct use of the tag:
 ```html
-<gradient:#8091ff:#ff00bf><center>eternalcode.pl</center></gradient> // correct
+<gradient:#8091ff:#ff00bf><center>eternalcode.pl</center></gradient> // correct ✅
 ```
 
 This syntax example represents an incorrect use of the `<center>` tag:
 ```html
-<center><gradient:#8091ff:#ff00bf>eternalcode.pl</gradient></center> // incorrect
+<center><gradient:#8091ff:#ff00bf>eternalcode.pl</gradient></center> // incorrect ❌
 ```
 
 In order for the `<center>` tag to function properly, remember to apply it only to a center-set text. It should not be
