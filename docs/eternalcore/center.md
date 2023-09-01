@@ -1,6 +1,6 @@
 # 📖 Center Text with the `<center>` Tag
 
-## ⚠ The `<center>` tag is not responsive and operates optimally under general interface settings.
+## ⚠ The `<center>` tag is not responsive and operates optimally under default interface settings.
 
 ## How to use
 Here's the appropriate syntax of using the tag:
