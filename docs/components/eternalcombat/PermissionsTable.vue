@@ -2,20 +2,22 @@
   <div>
     <table>
       <thead>
-      <tr>
-        <th>Permission</th>
-        <th>Description</th>
-        <th>Command</th>
-      </tr>
+        <tr>
+          <th>Permission</th>
+          <th>Description</th>
+          <th>Command</th>
+        </tr>
       </thead>
       <tbody>
-      <tr v-for="(permission, key) in permissions" :key="key">
-        <td>{{ permission.command }}</td>
-        <td>{{ permission.description }}</td>
-        <td>
-          <button @click="copyToClipboard(permission.permission)">{{ permission.permission }}</button>
-        </td>
-      </tr>
+        <tr v-for="(permission, key) in permissions" :key="key">
+          <td>{{ permission.command }}</td>
+          <td>{{ permission.description }}</td>
+          <td>
+            <button @click="copyToClipboard(permission.permission)">
+              {{ permission.permission }}
+            </button>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -23,17 +25,16 @@
 
 <script lang="ts">
 import PermissionsTable from "./PermissionsTable.json";
-import {useToast} from "vue-toastification/dist/index.mjs";
-import {defineComponent} from "vue";
+import { useToast } from "vue-toastification/dist/index.mjs";
+import { defineComponent } from "vue";
 
 const toast = useToast();
-
 
 export default defineComponent({
   name: "PermissionsCommandTable",
   data() {
     return {
-      permissions: PermissionsTable.PermissionsTable
+      permissions: PermissionsTable.PermissionsTable,
     };
   },
   methods: {
@@ -52,7 +53,7 @@ export default defineComponent({
           hideProgressBar: false,
           closeButton: "button",
           icon: true,
-          rtl: false
+          rtl: false,
         });
       } catch (error) {
         console.error("Failed to copy text: ", error);
@@ -62,6 +63,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

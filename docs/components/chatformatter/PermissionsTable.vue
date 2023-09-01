@@ -2,48 +2,53 @@
   <div>
     <table>
       <thead>
-      <tr>
-        <th>Tags</th>
-        <th>Description</th>
-        <th>Permissions</th>
-      </tr>
+        <tr>
+          <th>Tags</th>
+          <th>Description</th>
+          <th>Permissions</th>
+        </tr>
       </thead>
       <tbody>
-      <tr v-for="(tag, key) in tags" :key="key">
-        <td>{{ tag.tags }}</td>
-        <td>{{ tag.description }}</td>
-        <td>
-          <button @click="copyToClipboard(tag.permission)">{{ tag.permission }}</button>
-        </td>
-      </tr>
+        <tr v-for="(tag, key) in tags" :key="key">
+          <td>{{ tag.tags }}</td>
+          <td>{{ tag.description }}</td>
+          <td>
+            <button @click="copyToClipboard(tag.permission)">
+              {{ tag.permission }}
+            </button>
+          </td>
+        </tr>
       </tbody>
     </table>
     <br />
     <p>Other permissions included in plugin</p>
     <table>
       <thead>
-      <tr>
-        <th>Permission</th>
-        <th>Description</th>
-      </tr>
+        <tr>
+          <th>Permission</th>
+          <th>Description</th>
+        </tr>
       </thead>
       <tbody>
-      <tr>
-        <td>
-          <button @click="copyToClipboard('chatformatter.chat.reload')">chatformatter.chat.reload</button>
-        </td>
-        <td>
-          Permission to reload the plugin using the /chatformatter reload command.
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <button @click="copyToClipboard('chatformatter.receiveupdates')">chatformatter.receiveupdates</button>
-        </td>
-        <td>
-          Permission to receive update announcements for this plugin.
-        </td>
-      </tr>
+        <tr>
+          <td>
+            <button @click="copyToClipboard(tag.permission)">
+              chatformatter.chat.reload
+            </button>
+          </td>
+          <td>
+            Permission to reload the plugin using the /chatformatter reload
+            command.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button @click="copyToClipboard(tag.permission)">
+              chatformatter.receiveupdates
+            </button>
+          </td>
+          <td>Permission to receive update announcements for this plugin.</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -51,8 +56,8 @@
 
 <script lang="ts">
 import TagsDescPermissions from "./TagsDescPermissions.json";
-import {useToast} from "vue-toastification/dist/index.mjs";
-import {defineComponent} from "vue";
+import { useToast } from "vue-toastification/dist/index.mjs";
+import { defineComponent } from "vue";
 
 const toast = useToast();
 
@@ -79,7 +84,7 @@ export default defineComponent({
           hideProgressBar: false,
           closeButton: "button",
           icon: true,
-          rtl: false
+          rtl: false,
         });
       } catch (error) {
         console.error("Failed to copy text: ", error);
@@ -88,6 +93,4 @@ export default defineComponent({
   },
 });
 </script>
-<style scoped>
-
-</style>
+<style scoped></style>

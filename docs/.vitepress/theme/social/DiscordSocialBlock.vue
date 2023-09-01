@@ -1,19 +1,18 @@
 <template>
-
-  <a class="social-discord scrollable-place" href="https://discord.gg/FQ7jmGBd6c">
-    <img src="/assets/discord.svg" alt="Discord banner image">
+  <a
+    class="social-discord scrollable-place"
+    href="https://discord.gg/FQ7jmGBd6c">
+    <img src="/assets/discord.svg" alt="Discord banner image" />
   </a>
-
 </template>
 
 <script>
 export default {
-  name: 'DiscordSocialBlock',
-}
+  name: "DiscordSocialBlock",
+};
 </script>
 
 <style scoped>
-
 .social-discord {
   display: flex;
   justify-content: center;
@@ -28,5 +27,4 @@ export default {
 .scrollable-place {
   overflow: hidden;
 }
-
 </style>
