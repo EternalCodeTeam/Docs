@@ -7,20 +7,35 @@ on:
     branches: [ "master" ]
 
 jobs:
-  build:
+  build-lint:
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [ 18.x ]
 
     steps:
       - uses: actions/checkout@v3
-      - run: npm install -g pnpm
-      - name: Use Node.js ${{ matrix.node-version }}
+
+      - name: Setup Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "pnpm"
-      - run: pnpm install
-      - run: pnpm run docs:build
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Cache pnpm
+        uses: actions/cache@v3
+        with:
+          path: ~/.pnpm-cache
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build docs and run lint
+        run: |
+          pnpm run docs:build
+          pnpm run lint
