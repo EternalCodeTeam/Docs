@@ -11,7 +11,7 @@ export default defineConfig({
   cleanUrls: true,
 
   sitemap: {
-    hostname: 'https://eternalcode.pl/'
+    hostname: "https://eternalcode.pl/",
   },
 
   markdown: {
