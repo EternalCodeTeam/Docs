@@ -11,7 +11,7 @@ export default defineConfig({
   cleanUrls: true,
 
   sitemap: {
-    hostname: "https://eternalcode.pl/",
+    hostname: "https://docs.eternalcode.pl/",
   },
 
   markdown: {
@@ -29,7 +29,7 @@ export default defineConfig({
     },
 
     footer: {
-      message: "Made by Martin Sulikowski with ❤️",
+      message: "Made by EternalCodeTeam with ❤️!",
       copyright: "Copyright © 2021-present EternalCodeTeam",
     },
 
