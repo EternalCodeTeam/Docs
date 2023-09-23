@@ -1,9 +1,9 @@
 <script setup>
-import DiscordSocialBlock from "./DiscordSocialBlock.vue";</script>
+import DiscordSocialBlock from "./DiscordSocialBlock.vue";
+</script>
 
 <template>
   <div class="socialblock">
-
     <div class="socialblock-info">
       <p>
         If you have any questions, feel free to join our Discord server and ask
@@ -11,9 +11,8 @@ import DiscordSocialBlock from "./DiscordSocialBlock.vue";</script>
       </p>
     </div>
 
-    <DiscordSocialBlock/>
+    <DiscordSocialBlock />
   </div>
-
 </template>
 
 <script>
@@ -23,7 +22,6 @@ export default {
 </script>
 
 <style scoped>
-
 .socialblock {
   display: flex;
   flex-direction: column;

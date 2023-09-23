@@ -2,20 +2,22 @@
   <div>
     <table>
       <thead>
-      <tr>
-        <th>Color</th>
-        <th>Description</th>
-        <th>Permissions</th>
-      </tr>
+        <tr>
+          <th>Color</th>
+          <th>Description</th>
+          <th>Permissions</th>
+        </tr>
       </thead>
       <tbody>
-      <tr v-for="(tag, key) in colors" :key="key">
-        <td>{{ tag.tags }}</td>
-        <td>{{ tag.description }}</td>
-        <td>
-          <button @click="copyToClipboard(tag.permission)">{{ tag.permission }}</button>
-        </td>
-      </tr>
+        <tr v-for="(tag, key) in colors" :key="key">
+          <td>{{ tag.tags }}</td>
+          <td>{{ tag.description }}</td>
+          <td>
+            <button @click="copyToClipboard(tag.permission)">
+              {{ tag.permission }}
+            </button>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -23,8 +25,8 @@
 
 <script lang="ts">
 import ColorTable from "./ColorTable.json";
-import {useToast} from "vue-toastification/dist/index.mjs";
-import {defineComponent} from "vue";
+import { useToast } from "vue-toastification/dist/index.mjs";
+import { defineComponent } from "vue";
 
 const toast = useToast();
 
@@ -32,7 +34,7 @@ export default defineComponent({
   name: "PermissionsTable",
   data() {
     return {
-      colors: ColorTable.ColorsTable
+      colors: ColorTable.ColorsTable,
     };
   },
   methods: {
@@ -51,7 +53,7 @@ export default defineComponent({
           hideProgressBar: false,
           closeButton: "button",
           icon: true,
-          rtl: false
+          rtl: false,
         });
       } catch (error) {
         console.error("Failed to copy text: ", error);
@@ -60,6 +62,3 @@ export default defineComponent({
   },
 });
 </script>
-<style scoped>
-
-</style>
