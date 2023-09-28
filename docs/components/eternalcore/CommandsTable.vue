@@ -6,7 +6,7 @@
           <th>Name</th>
           <th>Arguments</th>
           <th>Description</th>
-          <th>Permissions</th>
+          <th>Permissions (Click to copy)</th>
         </tr>
       </thead>
       <tbody>
@@ -34,7 +34,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import axios from "axios";
-import pkg from 'vue-toast-notification/dist/index.min.js';
+import * as pkg from "vue-toast-notification";
 const { useToast } = pkg;
 
 interface Command {

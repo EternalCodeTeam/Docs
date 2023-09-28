@@ -2,28 +2,28 @@
   <div>
     <table>
       <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Permissions</th>
-      </tr>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Permissions (Click to copy)</th>
+        </tr>
       </thead>
       <tbody>
-      <tr v-for="feature in features" :key="feature.name">
-        <td>{{ feature.name }}</td>
-        <td>{{ feature.descriptions.join(", ") }}</td>
-        <td>
-          <div>
-            <button
-              v-for="(permission, index) in feature.permissions"
-              :key="index"
-              @click="copyToClipboard(permission)">
-              {{ permission }}
-              <span v-if="index < feature.permissions.length - 1">, </span>
-            </button>
-          </div>
-        </td>
-      </tr>
+        <tr v-for="feature in features" :key="feature.name">
+          <td>{{ feature.name }}</td>
+          <td>{{ feature.descriptions.join(", ") }}</td>
+          <td>
+            <div>
+              <button
+                v-for="(permission, index) in feature.permissions"
+                :key="index"
+                @click="copyToClipboard(permission)">
+                {{ permission }}
+                <span v-if="index < feature.permissions.length - 1">, </span>
+              </button>
+            </div>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -32,7 +32,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import axios from "axios";
-import pkg from 'vue-toast-notification/dist/index.min.js';
+import * as pkg from "vue-toast-notification";
 const { useToast } = pkg;
 
 interface Feature {

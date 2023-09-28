@@ -14,7 +14,7 @@
           <td>{{ permission.description }}</td>
           <td>
             <button @click="copyToClipboard(permission.permission)">
-              {{ permission.permission }} (Click to copy)
+              {{ permission.permission }}
             </button>
           </td>
         </tr>
@@ -25,9 +25,9 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import pkg from 'vue-toast-notification/dist/index.min.js';
-const { useToast } = pkg;
 import TagsDescPermissions from "./TagsDescPermissions.json";
+import * as pkg from "vue-toast-notification";
+const { useToast } = pkg;
 
 interface Permission {
   tags: string;

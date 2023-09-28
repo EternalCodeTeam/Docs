@@ -14,7 +14,7 @@
           <td>{{ tag.description }}</td>
           <td>
             <button @click="copyToClipboard(tag.permission)">
-              {{ tag.permission }} (Click to copy)
+              {{ tag.permission }}
             </button>
           </td>
         </tr>
@@ -25,9 +25,9 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import pkg from "vue-toast-notification/dist/index.min.js";
-const { useToast } = pkg;
 import ColorTable from "./ColorTable.json";
+import * as pkg from "vue-toast-notification";
+const { useToast } = pkg;
 
 interface Color {
   tags: string;
