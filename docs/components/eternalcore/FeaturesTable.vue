@@ -2,28 +2,28 @@
   <div>
     <table>
       <thead>
-        <tr>
-          <th>Name</th>
-          <th>Description</th>
-          <th>Permissions</th>
-        </tr>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Permissions</th>
+      </tr>
       </thead>
       <tbody>
-        <tr v-for="feature in features" :key="feature.name">
-          <td>{{ feature.name }}</td>
-          <td>{{ feature.descriptions.join(", ") }}</td>
-          <td>
-            <div>
-              <button
-                v-for="(permission, index) in feature.permissions"
-                :key="index"
-                @click="copyToClipboard(permission)">
-                {{ permission }}
-                <span v-if="index < feature.permissions.length - 1">, </span>
-              </button>
-            </div>
-          </td>
-        </tr>
+      <tr v-for="feature in features" :key="feature.name">
+        <td>{{ feature.name }}</td>
+        <td>{{ feature.descriptions.join(", ") }}</td>
+        <td>
+          <div>
+            <button
+              v-for="(permission, index) in feature.permissions"
+              :key="index"
+              @click="copyToClipboard(permission)">
+              {{ permission }}
+              <span v-if="index < feature.permissions.length - 1">, </span>
+            </button>
+          </div>
+        </td>
+      </tr>
       </tbody>
     </table>
   </div>
@@ -32,7 +32,8 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import axios from "axios";
-import { useToast } from "vue-toast-notification";
+import pkg from 'vue-toast-notification/dist/index.min.js';
+const { useToast } = pkg;
 
 interface Feature {
   name: string;
@@ -64,9 +65,10 @@ export default defineComponent({
         throw new Error("The 'text' parameter must be a string.");
       }
 
+      const $toast = useToast();
+
       try {
         await navigator.clipboard.writeText(text);
-        const $toast = useToast();
         $toast.success("Copied permission to clipboard!");
       } catch (error) {
         console.error("Failed to copy text: ", error);

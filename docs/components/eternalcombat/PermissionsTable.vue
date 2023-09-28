@@ -14,7 +14,7 @@
           <td>{{ permission.description }}</td>
           <td>
             <button @click="copyToClipboard(permission.permission)">
-              {{ permission.permission }}
+              {{ permission.permission }} (Click to copy)
             </button>
           </td>
         </tr>
@@ -25,7 +25,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { useToast } from "vue-toast-notification";
+import pkg from 'vue-toast-notification/dist/index.min.js';
+const { useToast } = pkg;
 import PermissionTable from "./PermissionsTable.json";
 
 interface Permission {
@@ -40,19 +41,17 @@ export default defineComponent({
       permissions: PermissionTable.PermissionsTable,
     };
   },
-  setup() {
-    const $toast = useToast();
-    return { $toast };
-  },
   methods: {
     async copyToClipboard(text: string) {
       if (typeof text !== "string") {
         throw new Error("The 'text' parameter must be a string.");
       }
 
+      const $toast = useToast();
+
       try {
         await navigator.clipboard.writeText(text);
-        this.$toast.success("Copied permission to clipboard!");
+        $toast.success("Copied permission to clipboard!");
       } catch (error) {
         console.error("Failed to copy text: ", error);
       }

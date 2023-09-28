@@ -34,7 +34,8 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import axios from "axios";
-import { useToast } from "vue-toast-notification";
+import pkg from 'vue-toast-notification/dist/index.min.js';
+const { useToast } = pkg;
 
 interface Command {
   name: string;
@@ -61,19 +62,17 @@ export default defineComponent({
       console.error(error);
     }
   },
-  setup() {
-    const $toast = useToast();
-    return { $toast };
-  },
   methods: {
     async copyToClipboard(text: string) {
       if (typeof text !== "string") {
         throw new Error("The 'text' parameter must be a string.");
       }
 
+      const $toast = useToast();
+
       try {
         await navigator.clipboard.writeText(text);
-        this.$toast.success("Copied permission to clipboard!");
+        $toast.success("Copied permission to clipboard!");
       } catch (error) {
         console.error("Failed to copy text: ", error);
       }
