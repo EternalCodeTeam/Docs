@@ -18,10 +18,6 @@ export default defineConfig({
     lineNumbers: true,
   },
 
-  vite: {
-    plugins: [],
-  },
-
   themeConfig: {
     editLink: {
       pattern: "https://github.com/EternalCodeTeam/docs/edit/master/docs/:path",

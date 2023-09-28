@@ -10,7 +10,7 @@ EternalCombat features few commands and permissions. You can find them below.
 
 <PermissionsTable/>
 
-## 🫠 Other Features
+## 🕵️‍♀️ Other Features
 
 EternalCombat allows you to customize your combat experience. You can find all features below.
 

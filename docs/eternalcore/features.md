@@ -1,6 +1,6 @@
 <script setup>
-  import FeaturesTable from '../components/FeaturesTable.vue';
-  import CommandsTable from '../components/CommandsTable.vue';
+  import FeaturesTable from '../components/eternalcore/FeaturesTable.vue';
+  import CommandsTable from '../components/eternalcore/CommandsTable.vue';
 </script>
 
 # 🔥🚀😎 All EternalCore Commands and Features 

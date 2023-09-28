@@ -3,51 +3,20 @@
     <table>
       <thead>
         <tr>
-          <th>Tags</th>
+          <th>Name</th>
           <th>Description</th>
-          <th>Permissions</th>
+          <th>Permissions (Click to copy)</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(tag, key) in tags" :key="key">
-          <td>{{ tag.tags }}</td>
-          <td>{{ tag.description }}</td>
+        <tr v-for="permission in permissions" :key="permission">
+          <td>{{ permission.tags }}</td>
+          <td>{{ permission.description }}</td>
           <td>
-            <button @click="copyToClipboard(tag.permission)">
-              {{ tag.permission }}
+            <button @click="copyToClipboard(permission.permission)">
+              {{ permission.permission }}
             </button>
           </td>
-        </tr>
-      </tbody>
-    </table>
-    <br />
-    <p>Other permissions included in plugin</p>
-    <table>
-      <thead>
-        <tr>
-          <th>Permission</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <button @click="copyToClipboard(tag.permission)">
-              chatformatter.chat.reload
-            </button>
-          </td>
-          <td>
-            Permission to reload the plugin using the /chatformatter reload
-            command.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <button @click="copyToClipboard(tag.permission)">
-              chatformatter.receiveupdates
-            </button>
-          </td>
-          <td>Permission to receive update announcements for this plugin.</td>
         </tr>
       </tbody>
     </table>
@@ -55,37 +24,36 @@
 </template>
 
 <script lang="ts">
-import TagsDescPermissions from "./TagsDescPermissions.json";
-import { useToast } from "vue-toastification/dist/index.mjs";
 import { defineComponent } from "vue";
+import { useToast } from "vue-toast-notification";
+import TagsDescPermissions from "./TagsDescPermissions.json";
 
-const toast = useToast();
+interface Permission {
+  tags: string;
+  description: string;
+  permission: string;
+}
 
 export default defineComponent({
   name: "PermissionsTable",
   data() {
     return {
-      tags: TagsDescPermissions.TagsDescPermissions,
+      permissions: TagsDescPermissions.TagsDescPermissions,
     };
+  },
+  setup() {
+    const $toast = useToast();
+    return { $toast };
   },
   methods: {
     async copyToClipboard(text: string) {
+      if (typeof text !== "string") {
+        throw new Error("The 'text' parameter must be a string.");
+      }
+
       try {
         await navigator.clipboard.writeText(text);
-        toast.success("Successfully copied permission!", {
-          position: "bottom-right",
-          timeout: 1029,
-          closeOnClick: true,
-          pauseOnFocusLoss: true,
-          pauseOnHover: false,
-          draggable: true,
-          draggablePercent: 0.6,
-          showCloseButtonOnHover: false,
-          hideProgressBar: false,
-          closeButton: "button",
-          icon: true,
-          rtl: false,
-        });
+        this.$toast.success("Copied permission to clipboard!");
       } catch (error) {
         console.error("Failed to copy text: ", error);
       }

@@ -3,9 +3,9 @@
     <table>
       <thead>
         <tr>
-          <th>Permission</th>
-          <th>Description</th>
           <th>Command</th>
+          <th>Description</th>
+          <th>Permission</th>
         </tr>
       </thead>
       <tbody>
@@ -24,37 +24,35 @@
 </template>
 
 <script lang="ts">
-import PermissionsTable from "./PermissionsTable.json";
-import { useToast } from "vue-toastification/dist/index.mjs";
 import { defineComponent } from "vue";
+import { useToast } from "vue-toast-notification";
+import PermissionTable from "./PermissionsTable.json";
 
-const toast = useToast();
+interface Permission {
+  command: string;
+  description: string;
+  permission: string;
+}
 
 export default defineComponent({
-  name: "PermissionsCommandTable",
-  data() {
+  data(): { permissions: Permission[] } {
     return {
-      permissions: PermissionsTable.PermissionsTable,
+      permissions: PermissionTable.PermissionsTable,
     };
+  },
+  setup() {
+    const $toast = useToast();
+    return { $toast };
   },
   methods: {
     async copyToClipboard(text: string) {
+      if (typeof text !== "string") {
+        throw new Error("The 'text' parameter must be a string.");
+      }
+
       try {
         await navigator.clipboard.writeText(text);
-        toast.success("Successfully copied permission!", {
-          position: "bottom-right",
-          timeout: 1029,
-          closeOnClick: true,
-          pauseOnFocusLoss: true,
-          pauseOnHover: false,
-          draggable: true,
-          draggablePercent: 0.6,
-          showCloseButtonOnHover: false,
-          hideProgressBar: false,
-          closeButton: "button",
-          icon: true,
-          rtl: false,
-        });
+        this.$toast.success("Copied permission to clipboard!");
       } catch (error) {
         console.error("Failed to copy text: ", error);
       }

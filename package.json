@@ -1,6 +1,7 @@
 {
   "name": "docs",
   "description": "All documentations of EternalCodeTeam Projects &amp; Tutorials",
+  "type": "module",
   "authors": {
     "name": "Martin Sulikowski",
     "email": "vluckyyy.biznes@gmail.com"
@@ -19,18 +20,18 @@
   "license": "GPL-3.0",
   "devDependencies": {
     "prettier": "3.0.3",
-    "vitepress": "1.0.0-alpha.66",
+    "vitepress": "1.0.0-rc.20",
     "vitepress-plugin-search": "1.0.4-alpha.20",
-    "vue": "3.2.47"
+    "vue": "3.3.4"
   },
   "dependencies": {
-    "@typescript-eslint/parser": "^6.5.0",
-    "axios": "^1.5.0",
-    "eslint": "^8.47.0",
+    "@typescript-eslint/parser": "^6.7.3",
+    "axios": "^1.5.1",
+    "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "minisearch": "^6.1.0",
     "vue-eslint-parser": "^9.3.1",
-    "vue-toastification": "2.0.0-rc.5"
+    "vue-toast-notification": "^3.1.1"
   }
 }
