@@ -13,5 +13,5 @@
       "matchPackagePatterns": ["*"]
     }
   ],
-  "separateMajorMinor": false
+  "separateMajorMinor": true
 }
