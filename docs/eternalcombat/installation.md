@@ -8,6 +8,9 @@ After downloading the EternalCombat JAR file, place it in the "plugins" folder o
 ### Step 2: Restart the Minecraft server 🔄
 After placing the JAR file in the plugin folder, restart the Minecraft server. The EternalCombat plugin should be automatically loaded by the server. If the plugin doesn't load correctly, inform us about it in the [Issues](https://github.com/EternalCodeTeam/EternalCombat/issues) tab or on our [discord](https://discord.gg/FQ7jmGBd6c) 😎
 
+### Step 3: Configure the plugin ⚙️
+In `plugins/EternalCombat/config.yml` you can configure the plugin to your liking. There are many options available, so you can customize the plugin to your needs. With any questions feel free to ask.
+
 ## ⚡ Upgrading
 📝 **Note**: Before starting the upgrade, make sure you back up your EternalCombat plugin configuration to avoid potential configuration conflicts.
 

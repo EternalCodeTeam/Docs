@@ -18,5 +18,6 @@ EternalCombat allows you to customize your combat experience. You can find all f
 - Combat messages,
 - Combat anti-logout timer,
 - Combat status for players,
+- Custom effects in fight,
 - Disable block placing in areas above certain height,
 - Add combat-log to other entity damage events,
