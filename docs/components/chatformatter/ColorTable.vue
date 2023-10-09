@@ -3,13 +3,13 @@
     <table>
       <thead>
         <tr>
-          <th>Color</th>
+          <th>Name</th>
           <th>Description</th>
-          <th>Permissions</th>
+          <th>Permissions (Click to copy)</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(tag, key) in colors" :key="key">
+        <tr v-for="tag in colors" :key="tag.tags">
           <td>{{ tag.tags }}</td>
           <td>{{ tag.description }}</td>
           <td>
@@ -24,37 +24,34 @@
 </template>
 
 <script lang="ts">
-import ColorTable from "./ColorTable.json";
-import { useToast } from "vue-toastification/dist/index.mjs";
 import { defineComponent } from "vue";
+import ColorTable from "./ColorTable.json";
+import * as pkg from "vue-toast-notification";
+const { useToast } = pkg;
 
-const toast = useToast();
+interface Color {
+  tags: string;
+  description: string;
+  permission: string;
+}
 
 export default defineComponent({
-  name: "PermissionsTable",
-  data() {
+  data(): { colors: Color[] } {
     return {
       colors: ColorTable.ColorsTable,
     };
   },
   methods: {
     async copyToClipboard(text: string) {
+      if (typeof text !== "string") {
+        throw new Error("The 'text' parameter must be a string.");
+      }
+
+      const $toast = useToast();
+
       try {
         await navigator.clipboard.writeText(text);
-        toast.success("Successfully copied permission!", {
-          position: "bottom-right",
-          timeout: 1029,
-          closeOnClick: true,
-          pauseOnFocusLoss: true,
-          pauseOnHover: false,
-          draggable: true,
-          draggablePercent: 0.6,
-          showCloseButtonOnHover: false,
-          hideProgressBar: false,
-          closeButton: "button",
-          icon: true,
-          rtl: false,
-        });
+        $toast.success("Copied permission to clipboard!");
       } catch (error) {
         console.error("Failed to copy text: ", error);
       }

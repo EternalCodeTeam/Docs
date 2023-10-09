@@ -14,15 +14,13 @@
           <td>{{ feature.descriptions.join(", ") }}</td>
           <td>
             <div>
-              <span
+              <button
                 v-for="(permission, index) in feature.permissions"
                 :key="index"
                 @click="copyToClipboard(permission)">
-                <button @click="copyToClipboard(permission)">
-                  {{ permission }}
-                </button>
+                {{ permission }}
                 <span v-if="index < feature.permissions.length - 1">, </span>
-              </span>
+              </button>
             </div>
           </td>
         </tr>
@@ -30,12 +28,12 @@
     </table>
   </div>
 </template>
+
 <script lang="ts">
 import { defineComponent } from "vue";
 import axios from "axios";
-import { useToast } from "vue-toastification/dist/index.mjs";
-
-const toast = useToast();
+import * as pkg from "vue-toast-notification";
+const { useToast } = pkg;
 
 interface Feature {
   name: string;
@@ -44,6 +42,7 @@ interface Feature {
 }
 
 export default defineComponent({
+  name: "FeaturesTable",
   data() {
     return {
       features: [] as Feature[],
@@ -62,22 +61,15 @@ export default defineComponent({
   },
   methods: {
     async copyToClipboard(text: string) {
+      if (typeof text !== "string") {
+        throw new Error("The 'text' parameter must be a string.");
+      }
+
+      const $toast = useToast();
+
       try {
         await navigator.clipboard.writeText(text);
-        toast.success("Successfully copied permission!", {
-          position: "bottom-right",
-          timeout: 1029,
-          closeOnClick: true,
-          pauseOnFocusLoss: true,
-          pauseOnHover: false,
-          draggable: true,
-          draggablePercent: 0.6,
-          showCloseButtonOnHover: false,
-          hideProgressBar: false,
-          closeButton: "button",
-          icon: true,
-          rtl: false,
-        });
+        $toast.success("Copied permission to clipboard!");
       } catch (error) {
         console.error("Failed to copy text: ", error);
       }

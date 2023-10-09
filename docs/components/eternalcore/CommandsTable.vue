@@ -16,14 +16,13 @@
           <td>{{ command.descriptions.join(", ") }}</td>
           <td>
             <div>
-              <span
+              <button
                 v-for="(permission, index) in command.permissions"
-                :key="index">
-                <button @click="copyToClipboard(permission)">
-                  {{ permission }}
-                </button>
+                :key="index"
+                @click="copyToClipboard(permission)">
+                {{ permission }}
                 <span v-if="index < command.permissions.length - 1">, </span>
-              </span>
+              </button>
             </div>
           </td>
         </tr>
@@ -31,12 +30,12 @@
     </table>
   </div>
 </template>
+
 <script lang="ts">
 import { defineComponent } from "vue";
 import axios from "axios";
-import { useToast } from "vue-toastification/dist/index.mjs";
-
-const toast = useToast();
+import * as pkg from "vue-toast-notification";
+const { useToast } = pkg;
 
 interface Command {
   name: string;
@@ -46,7 +45,8 @@ interface Command {
 }
 
 export default defineComponent({
-  data() {
+  name: "CommandsTable",
+  data(): { commands: Command[] } {
     return {
       commands: [] as Command[],
     };
@@ -64,22 +64,15 @@ export default defineComponent({
   },
   methods: {
     async copyToClipboard(text: string) {
+      if (typeof text !== "string") {
+        throw new Error("The 'text' parameter must be a string.");
+      }
+
+      const $toast = useToast();
+
       try {
         await navigator.clipboard.writeText(text);
-        toast.success("Successfully copied permission!", {
-          position: "bottom-right",
-          timeout: 1029,
-          closeOnClick: true,
-          pauseOnFocusLoss: true,
-          pauseOnHover: false,
-          draggable: true,
-          draggablePercent: 0.6,
-          showCloseButtonOnHover: false,
-          hideProgressBar: false,
-          closeButton: "button",
-          icon: true,
-          rtl: false,
-        });
+        $toast.success("Copied permission to clipboard!");
       } catch (error) {
         console.error("Failed to copy text: ", error);
       }
