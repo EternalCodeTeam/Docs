@@ -93,7 +93,7 @@ Our plugin supports two types of events.
 The first type is the `FightTagEvent` that is called when the player enters the fight or extends duration of the fight. 
 The second type is the `FightUnTagEvent` that is called when the player leaves the fight.
 
-You can access both event types by using EventListeners.
+You can access both event types by using `@EventHandler`.
 
 ```java
 @EventHandler
