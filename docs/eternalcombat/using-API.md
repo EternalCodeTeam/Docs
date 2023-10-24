@@ -42,6 +42,15 @@ For Maven:
 </dependency>
 ```
 
+You must also add dependency inside `plugin.yml` file, this is required to load our plugin before your plugin, so they can access our API.
+```yaml
+depend: [EternalCombat]
+```
+
+::: danger
+:warning: **Remember to add dependency inside `plugin.yml` file, otherwise your plugin will not work!** :warning:
+:::
+
 ## 📝 Usage
 To use our API you need to create instance of `EternalCombatAPI` class. You can do it by using `EternalCombatAPI.getInstance()` method.
 
@@ -67,9 +76,14 @@ Our API includes:
 The User can then use the methods of the given classes to create their own features. Here is an example of using the `FightManager` class:
 
 ```java
-FightManager fightManager = api.getFightManager();
-if (fightManager.isInCombat(player.getUniqueId())) {
-    // code when the player is in combat
+private EternalCombatApi eternalCombatApi;
+private EternalCombatProvider eternalCombatProvider;
+
+this.eternalCombatApi = eternalCombatProvider.provide();
+FightManager fightManager = this.eternalCombatApi.getFightManager();
+
+if (fightManager.isInCombat(uuID)) {
+    server.getPlayer(uuID).sendMessage("You are in combat!");
 }
 ```
 
@@ -83,13 +97,11 @@ You can access both event types by using EventListeners.
 
 ```java
 @EventHandler
-public void onTagEvent(FightTagEvent event) {
+void onTag(FightUntagEvent event) {
+    CauseOfUnTag cause = event.getCause();
     
-    // simple check if players UUID is equal to custom UUID
-    uniqueID = "19e84b9c4ab34690b8b012bcfa5e7649";
-    if (player.getUniqueId()equals(uniqueID)){
-        // if player UUID is equal to custom UUID, then cancel event
-        event.setCancelled(true);
-        }
+    if (cause == CauseOfUnTag.DEATH) {
+        server.getPlayer(event.getPlayer()).sendMessage("You died!");
+    }
 }
 ```
