@@ -91,6 +91,7 @@ function configureSidebar(currentPath: string) {
         { text: "🚀 Getting Started", link: "/eternalcombat/introduction" },
         { text: "🔧 Installation", link: "/eternalcombat/installation" },
         { text: "✨ Features", link: "/eternalcombat/features" },
+        { text: "📝 API setup", link: "/eternalcombat/using-API"}
       ],
     },
     {
