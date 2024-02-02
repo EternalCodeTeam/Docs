@@ -6,6 +6,7 @@ Plugin includes full support for teleportation, warps, homes and chat management
 ## EternalCore wiki's
 * [Installation and upgrading](installation.md)
 * [Features, Commands and Permissions](features.md)
+* [Developer API](using-API.md)
 * [Notifications](notifications.md)
 * [Homes](homes.md)
 * [Placeholders](placeholders.md)
