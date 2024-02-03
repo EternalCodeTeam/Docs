@@ -4,20 +4,23 @@ As part of open-source community, we support developers who want to create their
 
 ## 📚 Dependency Management
 
-To use our work in your plugin, You need to install correct artifact for your project. Our plugin supports Maven, Gradle Kotlin, Gradle Groovy and Gradle Groovy and SBT.
+To use our work in your plugin, You need to install correct artifact for your project. Our plugin supports Maven, Gradle Kotlin, Gradle Groovy and SBT.
 To use latest release check [maven repository](https://repo.eternalcode.pl/#/releases/com/eternalcode/eternalcombat-api).
 
 ### Add repository:
 
-For Gradle:
-```groovy
-maven {
-    url = uri("https://repo.eternalcode.pl/releases")
-}
+
+::: code-group
+
+```kotlin [Gradle (KTS)]
+maven("https://repo.eternalcode.pl/releases")
 ```
 
-For Maven:
-```xml
+```groovy [Gradle (Groovy)]
+maven { url = "https://repo.eternalcode.pl/releases" }
+```
+
+```xml [Maven]
 <repository>
     <id>eternalcode-reposilite-releases</id>
     <name>EternalCode Repository</name>
@@ -25,15 +28,21 @@ For Maven:
 </repository>
 ```
 
+:::
+
 ### Add dependency:
 
-For Gradle:
-```groovy
+::: code-group
+
+```kotlin [Gradle (KTS)]
 compileOnly("com.eternalcode:eternalcombat-api:1.1.1")
 ```
 
-For Maven:
-```xml
+```groovy [Gradle (Groovy)]
+compileOnly("com.eternalcode:eternalcombat-api:1.1.1")
+```
+
+```xml [Maven]
 <dependency>
     <groupId>com.eternalcode</groupId>
     <artifactId>eternalcombat-api</artifactId>
@@ -42,13 +51,26 @@ For Maven:
 </dependency>
 ```
 
-You must also add dependency inside `plugin.yml` file, this is required to load our plugin before your plugin, so they can access our API.
-```yaml
+:::
+
+You must also add dependency inside `plugin.yml` or `paper-plugin.yml` file, this is required to load our plugin before your plugin, so they can access our API.
+::: code-group
+
+```yaml [plugin.yml]
 depend: [EternalCombat]
 ```
 
+```yaml [paper-plugin.yml]
+dependencies:
+  server:
+    EternalCombat:
+      load: OMIT
+      required: true
+      join-classpath: true
+```
+
 ::: danger
-:warning: **Remember to add dependency inside `plugin.yml` file, otherwise your plugin will not work!** :warning:
+:warning: **Remember to add dependency inside `plugin.yml` or `paper-plugin.yml` file, otherwise your plugin will not work!** :warning:
 :::
 
 ## 📝 Usage

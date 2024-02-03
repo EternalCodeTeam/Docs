@@ -66,6 +66,7 @@ function configureSidebar(currentPath: string) {
         { text: "🚀 Getting Started", link: "/eternalcore/introduction" },
         { text: "🔧 Installation", link: "/eternalcore/installation" },
         { text: "✨ Features", link: "/eternalcore/features" },
+        { text: "👷 Developer API", link: "/eternalcore/using-api"},
         { text: "📖 Text center", link: "/eternalcore/center" },
         { text: "📑 Placeholders", link: "/eternalcore/placeholders" },
         { text: "🔔 Notifications", link: "/eternalcore/notifications" },
@@ -91,7 +92,7 @@ function configureSidebar(currentPath: string) {
         { text: "🚀 Getting Started", link: "/eternalcombat/introduction" },
         { text: "🔧 Installation", link: "/eternalcombat/installation" },
         { text: "✨ Features", link: "/eternalcombat/features" },
-        { text: "📝 API setup", link: "/eternalcombat/using-API"}
+        { text: "📝 API setup", link: "/eternalcombat/using-api"}
       ],
     },
     {
