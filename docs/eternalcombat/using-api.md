@@ -59,7 +59,7 @@ depend: [EternalCombat]
 dependencies:
   server:
     EternalCombat:
-      load: BEFORE
+      load: OMIT
       required: true
       join-classpath: true
 ```
