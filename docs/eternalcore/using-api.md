@@ -74,10 +74,10 @@ dependencies:
 :::
 
 ## 📝 Usage
-To use our API you need to create instance of `EternalCoreAPI` class. You can do it by using `EternalCoreProvider.provide()` method.
+To use our API you need to create instance of `EternalCoreAPI` class. You can do it by using `EternalCoreApiProvider.provide()` method.
 
 ```java
-EternalCoreAPI eternalCoreAPI = EternalCoreProvider.provide();
+EternalCoreAPI eternalCoreAPI = EternalCoreApiProvider.provide();
 ```
 After creating instance of api, the User gets access to various classes used in our plugin and methods.
 Our API includes:
