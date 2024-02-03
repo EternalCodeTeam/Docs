@@ -12,10 +12,11 @@ To use latest release check [maven repository](https://repo.eternalcode.pl/#/rel
 
 ::: code-group
 
-```kotlin [KTS]
+```kotlin [Gradle (KTS)]
 maven("https://repo.eternalcode.pl/releases")
 ```
-```groovy [Gradle]
+
+```groovy [Gradle (Groovy)]
 maven { url = "https://repo.eternalcode.pl/releases" }
 ```
 
@@ -33,7 +34,11 @@ maven { url = "https://repo.eternalcode.pl/releases" }
 
 ::: code-group
 
-```groovy [Gradle]
+```kotlin [Gradle (KTS)]
+compileOnly("com.eternalcode:eternalcombat-api:1.1.1")
+```
+
+```groovy [Gradle (Groovy)]
 compileOnly("com.eternalcode:eternalcombat-api:1.1.1")
 ```
 
