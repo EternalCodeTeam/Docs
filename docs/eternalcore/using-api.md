@@ -153,7 +153,7 @@ public class YourPlugin extends JavaPlugin {
 Using the instance of `CatboyService` the User is able to mark players as catboys and give them unique feature provided by `EternalCore`.
 
 ```java
-if (player.getDisplayName().equals("Rollczi")) {
-    catboyService.markAsCatboy(Player player, Cat.Type BLACK); // [!code focus]
+if (player.getName().equals("Rollczi")) {
+        catboyService.markAsCatboy(player, Cat.Type.BLACK); // [!code focus]
 }
 ```
