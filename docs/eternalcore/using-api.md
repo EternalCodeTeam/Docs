@@ -82,14 +82,19 @@ EternalCoreAPI eternalCoreAPI = EternalCoreApiProvider.provide();
 After creating instance of api, the User gets access to various classes used in our plugin and methods.
 Our API includes:
 
-| Class      | Provide method  |
-|------------|-----------------|
-| AfkService | getAfkService() |
+| Class                  | Provide method             |
+|------------------------|----------------------------|
+| AfkService             | getAfkService()            |
+| SpawnService           | getSpawnService()          |
+| CatboyService          | getCatboyService()         |
+| TeleportService        | getTeleportService()       |
+| RandomTeleportService  | getRandomTeleportService() |
 
 
 ### AfkService usage examples
 
-The User can then use the methods of the given classes to create their own use cases. Here is an example how to obtain instance of `AfkService`:
+The User can then use the methods of the given classes to create their own use cases. 
+Here is an example how to obtain instance of `AfkService`:
 
 ```java
 public class YourPlugin extends JavaPlugin {
@@ -101,6 +106,7 @@ public class YourPlugin extends JavaPlugin {
     public onEnable() {
         this.eternalCoreApi = EternalCoreProvider.provide(); // [!code focus]
         this.afkService = eternalCoreApi.getAfkService(); // [!code focus]
+        
     }
 }
 ```
@@ -118,9 +124,36 @@ if (afkService.isAfk(player.getUniqueId())) {
 Mark the player as afk if the player is not afk yet. 
 
 ```java
-if (!afkService.isAfk(player.getUniqueId)) {
-   Afk afkPlayer = afkService.markAfk(player.getUniqueId(), AfkReason.PLUGIN);
-   //marks player as afk and creates afk instance
+if (!afkService.isAfk(player.getUniqueId())) {
+    Afk afkPlayer = afkService.markAfk(player.getUniqueId(), AfkReason.PLUGIN);
+    // marks player as afk and creates afk instance
 }
 ```
 
+### CatboyService usage example
+
+The User can get other classes from `EternalCore` and use them in their own use cases.
+Here is an example how to obtain instance of `CatboyService`:
+
+```java
+public class YourPlugin extends JavaPlugin {
+
+    private EternalCoreApi eternalCoreApi; // [!code focus]
+    private CatboyService catboyService; // [!code focus]
+    
+    @Override
+    public onEnable() {
+        this.eternalCoreApi = EternalCoreProvider.provide(); // [!code focus]
+        this.catboyService = eternalCoreApi.getCatboyService(); // [!code focus]
+        
+    }
+}
+```
+
+Using the instance of `CatboyService` the User is able to mark players as catboys and give them unique feature provided by `EternalCore`.
+
+```java
+if (player.getName().equals("Rollczi")) {
+    catboyService.markAsCatboy(player, Cat.Type.BLACK); // [!code focus]
+}
+```
