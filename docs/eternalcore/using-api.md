@@ -124,9 +124,9 @@ if (afkService.isAfk(player.getUniqueId())) {
 Mark the player as afk if the player is not afk yet. 
 
 ```java
-if (!afkService.isAfk(player.getUniqueId)) {
-   Afk afkPlayer = afkService.markAfk(player.getUniqueId(), AfkReason.PLUGIN);
-   //marks player as afk and creates afk instance
+if (!afkService.isAfk(player.getUniqueId())) {
+    Afk afkPlayer = afkService.markAfk(player.getUniqueId(), AfkReason.PLUGIN);
+    // marks player as afk and creates afk instance
 }
 ```
 
