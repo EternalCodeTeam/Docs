@@ -154,6 +154,6 @@ Using the instance of `CatboyService` the User is able to mark players as catboy
 
 ```java
 if (player.getName().equals("Rollczi")) {
-        catboyService.markAsCatboy(player, Cat.Type.BLACK); // [!code focus]
+    catboyService.markAsCatboy(player, Cat.Type.BLACK); // [!code focus]
 }
 ```
