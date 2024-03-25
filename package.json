@@ -15,10 +15,10 @@
   },
   "license": "GPL-3.0",
   "devDependencies": {
-    "prettier": "3.2.4",
-    "vitepress": "1.0.0-rc.41",
+    "prettier": "3.2.5",
+    "vitepress": "1.0.1",
     "vitepress-plugin-search": "1.0.4-alpha.22",
-    "vue": "3.4.15"
+    "vue": "3.4.21"
   },
   "dependencies": {
     "@typescript-eslint/parser": "^7.0.0",
