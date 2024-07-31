@@ -21,12 +21,12 @@
     "vue": "3.4.23"
   },
   "dependencies": {
-    "@typescript-eslint/parser": "^7.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
     "axios": "^1.5.1",
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
-    "minisearch": "^6.1.0",
+    "minisearch": "^7.0.0",
     "vue-eslint-parser": "^9.3.1",
     "vue-toast-notification": "^3.1.1"
   }
