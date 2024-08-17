@@ -32,10 +32,10 @@ You can use MiniMessage formatting. Check out the [MiniMessage Viewer](https://w
 ```
 
 
-## 🏃💨 How do I add animation that does NOT flicker?
+## 🏃💨 How do I stop my timer from flickering?
 
 ### Problem:
-I want to create in game title with animation, but it keeps flickering.
+I want to create in game title with timer, but it keeps flickering on users screen.
 
 ### Solution:
 You can use `times` key in configuration file.
