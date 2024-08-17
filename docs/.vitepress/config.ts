@@ -68,7 +68,6 @@ function configureSidebar(currentPath: string) {
         { text: "❓ FAQ", link: "/eternalcore/faq" },
         { text: "✨ Features", link: "/eternalcore/features" },
         { text: "👷 Developer API", link: "/eternalcore/using-api"},
-        { text: "📖 Text center", link: "/eternalcore/center" },
         { text: "📑 Placeholders", link: "/eternalcore/placeholders" },
         { text: "🔔 Notifications", link: "/eternalcore/notifications" },
         { text: "🏠 Homes", link: "/eternalcore/homes" },

@@ -11,4 +11,3 @@ Plugin includes full support for teleportation, warps, homes and chat management
 * [Notifications](notifications.md)
 * [Homes](homes.md)
 * [Placeholders](placeholders.md)
-* [Text centering](center.md)
