@@ -32,7 +32,7 @@ You can use MiniMessage formatting. Check out the [MiniMessage Viewer](https://w
 ```
 
 
-## 🏃💨 How do I stop my timer from flickering?
+## 🏃💨 How do I stop my title from flickering?
 
 ### Problem:
 I want to create in game title with timer, but it keeps flickering on users screen.
