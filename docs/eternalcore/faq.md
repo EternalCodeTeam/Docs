@@ -18,7 +18,7 @@ You can disable command in `commands.yml` file.
     subCommands: []
 ```
 
-## 🎨 Formatting text in chat
+## 🎨 How do I format text in chat?
 
 ### Problem:
 I want to format text in chat. I want to style it, color it, etc.
@@ -32,7 +32,7 @@ You can use MiniMessage formatting. Check out the [MiniMessage Viewer](https://w
 ```
 
 
-## 🏃💨 No flickering title
+## 🏃💨 How do I add animation that does NOT flicker?
 
 ### Problem:
 I want to create in game title with animation, but it keeps flickering.
